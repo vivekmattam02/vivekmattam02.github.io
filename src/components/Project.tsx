@@ -17,7 +17,7 @@ function Project() {
         {/* 1) HSRN Robot – Data Center Robot */}
         <div className="project">
           <img src={datacenter} className="zoom" alt="HSRN Robot" width="50%" />
-          <h2>HSRN Robot — Data Center Automation</h2>
+          <h2>HSRN Robot - Data Center Automation</h2>
           <p>
             At NYU, I'm building a joystick-controlled robot for automating data center tasks. My focus is on developing perception models and multi-robot coordination using sensor fusion to help robots navigate tight spaces and understand their environment in real time. We're using Corelink's C++ client with ROS for inter-robot communication, with plans to transition from manual control to full autonomy.
           </p>
@@ -27,7 +27,7 @@ function Project() {
         {/* 2) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
         <div className="project">
           <img src={vip} className="zoom" alt="NYU Self-Drive" width="50%" />
-          <h2>NYU VIP Self-Drive — Autonomous Navigation & Visual SLAM</h2>
+          <h2>NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</h2>
           <p>
             A research project focused on autonomous indoor navigation using only visual SLAM—no LIDAR, just a monocular camera. I'm handling path planning with A* and robot localization using ORB feature matching. The challenge is making a TurtleBot3 navigate unknown spaces with minimal sensor data, relying on smart graph-based planning and exploration strategies. We're prepping for the Self-Drive Exploration & Navigation Challenge.
           </p>
@@ -37,7 +37,7 @@ function Project() {
         {/* 3) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
         <div className="project">
           <img src={slap} className="zoom" alt="S.L.A.P. Hand" width="50%" />
-          <h2>The S.L.A.P. Hand — Remote-Controlled Robotic Hand</h2>
+          <h2>The S.L.A.P. Hand - Remote-Controlled Robotic Hand</h2>
           <p>
             S.L.A.P. (Simultaneous Linked Articulation Project) is a gesture-controlled animatronic hand I started as an undergrad project, now evolving it for handling hazardous materials. It features haptic feedback for tactile sensing and I'm currently upgrading from Bluetooth to wired communication for better stability. Future plans include finger-mounted cameras for object detection and AI-driven grasp optimization.
           </p>
@@ -45,7 +45,7 @@ function Project() {
         </div>
         {/* 4) Foundations of Robotics – SCARA Manipulator Control & Planning */}
         <div className="project">
-        <h2>Foundations of Robotics — SCARA Manipulator Control & Planning</h2>
+        <h2>Foundations of Robotics - SCARA Manipulator Control & Planning</h2>
          <p>
           A three-phase project building progressive control systems for a 4-DOF SCARA manipulator. I implemented inverse kinematics using Jacobian methods, added real-time obstacle avoidance with Null-Space Projection, and designed dynamic control with trapezoidal velocity profiles accounting for inertia and external forces. All simulations were done in MATLAB and Simulink.
           </p>
@@ -58,7 +58,7 @@ function Project() {
         {/* 5) B.A.R.K. Door – Smart Pet Access System */}
         <div className="project">
           <img src={bark} className="zoom" alt="B.A.R.K. Door" width="50%" />
-          <h2>B.A.R.K. Door — IoT Pet Access System</h2>
+          <h2>B.A.R.K. Door - IoT Pet Access System</h2>
           <p>
             B.A.R.K. (Bluetooth Actuated Remote Key) Door is a smart pet door using RFID tags to recognize authorized pets and Bluetooth for manual control. Built with a BS2 microcontroller and servo mechanisms for the locking system. Currently exploring Wi-Fi integration and AI-based behavioral tracking for smarter automation.
           </p>
@@ -68,7 +68,7 @@ function Project() {
         {/* 6) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
         <div className="project">
           <img src={esvc} className="zoom" alt="E.S.V.C. Project" width="50%" />
-          <h2>E.S.V.C. — Solar-Powered Electric Vehicle</h2>
+          <h2>E.S.V.C. - Solar-Powered Electric Vehicle</h2>
           <p>
             As part of Team Solarians 4.0, I designed the chassis for our entry in the Electric Solar Vehicle Championship (competing against 60+ teams). Using CATIA V5 for CAD and ANSYS R16.2 for structural analysis, I optimized an AISI 4130 steel tubular frame to balance lightweight design with racing durability while meeting ESVC safety requirements.
           </p>
