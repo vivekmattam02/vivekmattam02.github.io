@@ -22,22 +22,13 @@ function Main() {
           <div className="about-me">
   <h2>About Me</h2>
   <p>
-    Hi, I’m <strong>Vivekananda Swamy Mattam</strong>, a Master’s student in Mechatronics and Robotics at NYU Tandon, 
-    specializing in autonomous navigation, SLAM, and real-time robotic systems. Growing up around agriculture, 
-    I witnessed firsthand how technology can transform industries, inspiring me to pursue robotics—not just as a field of study, 
-    but as a means to drive real-world impact.
+    Hey! I'm Vivek, and I'm working on my Master's in Mechatronics and Robotics at NYU Tandon. My main interests lie in autonomous navigation, SLAM, and real-time robotic systems. Growing up in an agricultural community, I saw firsthand how the right technology could completely transform an industry—and that's what got me hooked on robotics. It's not just about building cool machines for me; it's about creating systems that actually solve real problems.
   </p>
   <p>
-    My work spans self-driving technologies, industrial automation, and embedded systems. I am currently part of the 
-    <strong>NYU Self-Drive VIP</strong> project, focusing on SLAM-based navigation for autonomous robots. Previously, I interned at 
-    <strong>Xmachines</strong>, an agricultural robotics startup, where I contributed to sensor-driven automation, embedded systems, 
-    and robotic component design. Additionally, I have experience in energy-efficient vehicle design, having competed in the 
-    <strong>ESVC Solar Car National Championship</strong> against 60+ teams in a high-pressure engineering environment.
+    Right now, I'm part of NYU's Self-Drive VIP project, where we're tackling SLAM-based navigation for autonomous robots. Before this, I interned at <strong>Xmachines</strong> (an agricultural robotics startup), working on sensor integration and embedded systems for autonomous farm equipment. I've also competed in the <strong>ESVC Solar Car Championship</strong>—designing energy-efficient vehicle systems alongside 60+ other teams. That experience taught me a lot about working under pressure and thinking creatively when resources are tight.
   </p>
   <p>
-    I am particularly excited about blending AI, automation, and perception systems to develop intelligent, adaptable robotic solutions. 
-    I am actively seeking <strong>Summer 2025 internship opportunities</strong> in robotics, automation, and embedded systems, where 
-    I can apply my expertise and contribute to cutting-edge innovations.
+    What really excites me is the intersection of AI, perception systems, and real-time control. I love the challenge of making robots that can actually understand and adapt to their environment. I'm currently looking for <strong>Summer 2025 internship opportunities</strong> in robotics, autonomous systems, or embedded AI—basically anywhere I can work on making intelligent machines that do meaningful work.
   </p>
 </div>
 

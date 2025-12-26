@@ -17,24 +17,15 @@ function Project() {
         {/* 1) HSRN Robot – Data Center Robot */}
         <div className="project">
           <img src={datacenter} className="zoom" alt="HSRN Robot" width="50%" />
-          <h2>HSRN Robot – Data Center Robot</h2>
+          <h2>HSRN Robot — Data Center Automation</h2>
           <p>
-            The HSRN Robot Project at NYU focuses on developing a joystick-driven robotic system 
-            for data center automation, enabling precise navigation and real-time task execution. 
-            My role as a Developer involves designing robotic perception models and multi-agent 
-            coordination strategies to improve efficiency and reliability in structured environments.
+            This is a project I'm working on at NYU where we're building a joystick-controlled robot for automating tasks in data centers. The idea is to have a system that can navigate precisely and handle real-time tasks without human intervention in those tight, equipment-packed spaces.
           </p>
           <p>
-            Currently, I am working on sensor fusion techniques to enhance robotic perception, 
-            allowing the system to process and interpret data more accurately in real time. 
-            Additionally, I am developing multi-agent control algorithms, ensuring multiple robots 
-            can coordinate tasks effectively without conflicts or inefficiencies.
+            My role has been developing the perception models and figuring out how to get multiple robots to work together without stepping on each other's toes (literally). Right now, I'm focused on sensor fusion—basically getting the robot to process data from different sensors and make sense of its environment in real time.
           </p>
           <p>
-            To achieve seamless integration, I am implementing Corelink C++ client with ROS, 
-            allowing for efficient communication between the robotic system and the central 
-            control network. The joystick-based interface ensures precise manual control while 
-            maintaining the flexibility for future autonomous operations.
+            We're using Corelink's C++ client integrated with ROS for communication between the robots and the central control system. The joystick control gives us precision when we need it, but we're building in the flexibility to eventually let it run autonomously.
           </p>
           <p><strong>Technologies:</strong> ROS, C++, Python, Corelink, Sensor Fusion</p>
         </div>
@@ -42,23 +33,15 @@ function Project() {
         {/* 2) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
         <div className="project">
           <img src={vip} className="zoom" alt="NYU Self-Drive" width="50%" />
-          <h2>NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM</h2>
+          <h2>NYU VIP Self-Drive — Autonomous Navigation & Visual SLAM</h2>
           <p>
-            The NYU VIP Self-Drive project is a research initiative focused on developing 
-            autonomous navigation and mapping capabilities for small-scale indoor robotic vehicles. 
-            Our goal is to achieve efficient self-driving behavior in unknown environments 
-            using Visual SLAM, feature-based navigation, and real-time motion planning.
+            This is a research project where we're trying to get small robotic vehicles to navigate autonomously indoors. The challenge is making them work in spaces they've never seen before, using just visual SLAM and real-time motion planning.
           </p>
           <p>
-            I’m currently working on path planning, SLAM integration, and robot localization, 
-            using A* search for optimal pathfinding and ORB feature matching for vision-based 
-            landmark recognition. The system operates on ROS 2 Humble, utilizing a monocular camera 
-            for mapping and a TurtleBot3 platform for real-time testing.
+            I'm handling the path planning and robot localization side of things. We're using A* for finding optimal paths and ORB feature matching to help the robot recognize where it's been. Everything runs on ROS 2 Humble, with a monocular camera for mapping and a TurtleBot3 for testing.
           </p>
           <p>
-            A key challenge is ensuring accurate navigation with minimal sensor data, requiring 
-            advanced graph-based planning and efficient exploration strategies. The final stage 
-            of development will focus on competing in the Self-Drive Exploration & Navigation Challenge.
+            The tricky part is making this work with minimal sensor data—no fancy LIDAR, just a camera. That means we need really smart graph-based planning and efficient exploration strategies. We're preparing to compete in the Self-Drive Exploration & Navigation Challenge, which should be a good test of how robust our system really is.
           </p>
           <p><strong>Technologies:</strong> ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</p>
         </div>
@@ -66,51 +49,31 @@ function Project() {
         {/* 3) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
         <div className="project">
           <img src={slap} className="zoom" alt="S.L.A.P. Hand" width="50%" />
-          <h2>The S.L.A.P. Hand – Evolving My Animatronic Hand Project</h2>
+          <h2>The S.L.A.P. Hand — Remote-Controlled Robotic Hand</h2>
           <p>
-            The S.L.A.P. Hand (Simultaneous Linked Articulation Project) is an advanced version 
-            of my undergraduate Animatronic Hand project, designed for remote operation and 
-            hazardous material handling. I’m currently focused on improving control accuracy, 
-            articulation, and response time by integrating Wi-Fi-based communication, gesture 
-            tracking, and haptic feedback.
+            S.L.A.P. (Simultaneous Linked Articulation Project) is my take on building an animatronic hand that you can control remotely. I started this as an undergrad project and I'm now evolving it for handling hazardous materials. The goal is to have something that responds accurately to gestures and gives you haptic feedback so you can "feel" what the hand is doing.
           </p>
           <p>
-            This project is still in progress, and the next steps involve transitioning from 
-            Bluetooth to a more stable wired communication system, improving motor response times, 
-            and fine-tuning gesture-based articulation. Future plans include integrating cameras on 
-            the fingers for real-time object detection and exploring AI-driven grasp optimization.
+            Right now I'm in the middle of upgrading from Bluetooth to a wired system for better stability, and I'm working on improving the response time. Eventually, I want to add cameras on the fingers for real-time object detection and maybe even throw in some AI-driven grasp optimization.
+          </p>
+          <p>
+            This is very much a work in progress, but it's been a great learning experience in embedded systems and gesture-based control. Plus, it's just fun to build something that feels a bit like sci-fi.
           </p>
           <p><strong>Technologies:</strong> ESP8266, MPU6050, Haptic Feedback, Wi-Fi Communication</p>
         </div>
         {/* 4) Foundations of Robotics – SCARA Manipulator Control & Planning */}
         <div className="project">
-        <h2>Foundations of Robotics – SCARA Manipulator Control & Planning</h2>
+        <h2>Foundations of Robotics — SCARA Manipulator Control & Planning</h2>
          <p>
-          This project was a three-phase exploration into robotic motion control, completed during my first semester at NYU 
-          as part of the "Foundations of Robotics" course. Using a 4-DOF SCARA manipulator, I progressively built systems for 
-          kinematic control, real-time error correction, obstacle avoidance, and dynamic trajectory execution in simulated environments. 
-          The project was developed entirely in MATLAB and Simulink, with each phase building on the last to reflect increasingly realistic robotic behaviors.
+          This was a three-part project I did for my Foundations of Robotics course during my first semester at NYU. The assignment was to progressively build control systems for a 4-DOF SCARA manipulator, starting with basic kinematics and ending with full dynamic control.
           </p>
           <p>
-            In the first phase, I implemented basic inverse kinematics algorithms using both the Jacobian Inverse and Jacobian Transpose methods. 
-            These were applied to track a predefined Cartesian trajectory by translating end-effector positions into joint-level motions. 
-            This initial setup helped me understand the mathematical foundations of robot control and how Euler integration (1 ms timestep) 
-            can be used to simulate smooth joint movements.
+            In the first phase, I implemented inverse kinematics using both Jacobian Inverse and Jacobian Transpose methods. It was basically figuring out how to translate where you want the robot's end to be into what each joint needs to do. Phase two got more interesting—I added real-time obstacle avoidance using Null-Space Projection, so the robot could dodge obstacles while still following its path.
           </p>
           <p>
-          The second phase introduced real-time adaptability. I implemented second-order inverse kinematics to improve tracking accuracy 
-          and extended the system to avoid dynamic obstacles in the workspace. By using a Jacobian Pseudo-Inverse with Null-Space Projection, 
-          I enabled the manipulator to prioritize trajectory tracking in the x-y plane while dynamically adjusting in the z-direction to avoid collisions. 
-          This approach helped me experiment with redundancy resolution and secondary task execution, which are essential in complex robotic systems.
+          The final phase was all about dynamics. I designed smooth trajectories using trapezoidal velocity profiles and built a control system that accounted for the robot's inertia and external forces. Everything was simulated in MATLAB and Simulink, which gave me a solid understanding of how physical constraints affect robot behavior.
           </p>
-          <p>
-          The final phase combined trajectory planning with inverse dynamic control. I designed a smooth, multi-waypoint Cartesian trajectory 
-          using trapezoidal velocity profiles and anticipation timing to ensure continuity. Then, I implemented a control system that accounted 
-          for the robot’s dynamic behavior under varying load conditions. The SCARA manipulator was simulated using a second-order inverse 
-          kinematics model that generated torque commands for precise execution. This phase gave me hands-on insight into how real robots operate 
-          under physical constraints like inertia and external forces.
-          </p>
-          
+
           <p>
             <strong>Tools & Frameworks:</strong> MATLAB, Simulink, SCARA Simulation, VR Visualization<br/>
             <strong>Key Concepts:</strong> Inverse Kinematics, Null-Space Control, Trajectory Planning, Inverse Dynamics, Redundancy Resolution, Real-Time Motion Correction
@@ -120,17 +83,15 @@ function Project() {
         {/* 5) B.A.R.K. Door – Smart Pet Access System */}
         <div className="project">
           <img src={bark} className="zoom" alt="B.A.R.K. Door" width="50%" />
-          <h2>B.A.R.K. Door – Smart Pet Access System</h2>
+          <h2>B.A.R.K. Door — IoT Pet Access System</h2>
           <p>
-            B.A.R.K. (Bluetooth Actuated Remote Key) Door is a smart pet-access system I developed to 
-            enable secure, automated pet entry while preventing unauthorized access. The system 
-            uses RFID authentication, Bluetooth connectivity, and IoT-based monitoring.
+            B.A.R.K. (Bluetooth Actuated Remote Key) Door is basically a smart dog door I built. The idea was to let my dog come and go while keeping other animals out. It uses RFID tags to recognize authorized pets and has a Bluetooth connection so I can control it manually from my phone if needed.
           </p>
           <p>
-            I designed and implemented the system with BS2-controlled servo mechanisms, 
-            an RFID-based locking system, and Bluetooth-based manual override via a mobile app. 
-            Currently, I’m exploring Wi-Fi integration and AI-driven behavioral tracking to enhance 
-            access security and adaptability.
+            The hardware side uses a BS2 microcontroller with servo mechanisms for the locking system. I'm now exploring adding Wi-Fi and maybe some AI-based behavioral tracking to make it smarter about when to open and close.
+          </p>
+          <p>
+            It's a simple project, but it was a good exercise in IoT systems and taught me a lot about making hardware and software work together reliably.
           </p>
           <p><strong>Technologies:</strong> BS2, RFID, Bluetooth, IoT, Servo Mechanisms</p>
         </div>
@@ -138,21 +99,17 @@ function Project() {
         {/* 6) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
         <div className="project">
           <img src={esvc} className="zoom" alt="E.S.V.C. Project" width="50%" />
-          <h2>E.S.V.C. – Solar-Powered Electric Vehicle</h2>
+          <h2>E.S.V.C. — Solar-Powered Electric Vehicle</h2>
           <p>
-            The E.S.V.C. (Electric Solar Vehicle Championship) project focused on developing 
-            an electric solar vehicle designed for sustainability and efficient mobility. 
-            As part of Team Solarians 4.0 (ESVC-22-1498), I was responsible for designing 
-            and structurally analyzing a lightweight tubular chassis using CATIA V5 and 
-            ANSYS R16.2 software.
+            I was part of Team Solarians 4.0 for the Electric Solar Vehicle Championship, where we competed against 60+ other teams. My job was designing the chassis—making it lightweight but strong enough to handle the stresses of racing.
           </p>
           <p>
-            The chassis, engineered from AISI 4130 steel, ensured robustness under dynamic 
-            and impact loads. The design adhered to E.S.V.C. rulebook guidelines, emphasizing 
-            safety, vehicle stability, and optimal performance in competition conditions.
+            I used CATIA V5 for the CAD work and ANSYS R16.2 to simulate how the chassis would hold up under different loads and impacts. We went with AISI 4130 steel for the tubular frame to get the right balance between weight and strength. Everything had to follow the ESVC rulebook's safety requirements while still being optimized for performance.
           </p>
-          
-          <p><strong>Technologies:</strong> CATIA V5, ANSYS R16.2.</p>
+          <p>
+            It was intense working under competition pressure, but it taught me a lot about structural engineering and what it takes to build something that performs in real-world conditions.
+          </p>
+          <p><strong>Technologies:</strong> CATIA V5, ANSYS R16.2</p>
         </div>
 
       </div>
