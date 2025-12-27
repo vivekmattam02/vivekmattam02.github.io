@@ -14,7 +14,24 @@ function Project() {
       <h1>Projects</h1>
       <div className="projects-grid">
 
-        {/* 1) HSRN Robot – Data Center Robot */}
+        {/* 1) Reinforcement Learning for Quadruped Locomotion */}
+        <div className="project">
+          {/* Video placeholder - Replace VIDEO_URL_HERE with your video URL (YouTube embed, mp4, etc.) */}
+          <div className="video-container" style={{ marginBottom: '1rem' }}>
+            {/* For YouTube: <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
+            {/* For MP4: <video width="100%" controls><source src="VIDEO_URL_HERE" type="video/mp4" />Your browser does not support the video tag.</video> */}
+            <div style={{ width: '100%', height: '315px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px dashed #ccc' }}>
+              <p style={{ color: '#666', textAlign: 'center' }}>Video placeholder<br/>Replace with your video URL in Project.tsx</p>
+            </div>
+          </div>
+          <h2>Reinforcement Learning for Quadruped Locomotion</h2>
+          <p>
+            Trained a Unitree Go2 robot to walk using PPO in NVIDIA Isaac Lab. Implemented reward shaping for smooth actions, gait coordination (Raibert heuristic), and body stability. Added an actuator friction model with domain randomization for sim-to-real transfer. The final policy tracks velocity commands at nearly 2x the baseline targets on both flat and rough terrain.
+          </p>
+          <p><strong>Tools:</strong> Isaac Lab, PyTorch, PPO, NYU HPC</p>
+        </div>
+
+        {/* 2) HSRN Robot – Data Center Robot */}
         <div className="project">
           <img src={datacenter} className="zoom" alt="HSRN Robot" width="50%" />
           <h2>HSRN Robot - Data Center Automation</h2>
@@ -24,7 +41,7 @@ function Project() {
           <p><strong>Technologies:</strong> ROS, C++, Python, Corelink, Sensor Fusion</p>
         </div>
 
-        {/* 2) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
+        {/* 3) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
         <div className="project">
           <img src={vip} className="zoom" alt="NYU Self-Drive" width="50%" />
           <h2>NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</h2>
@@ -34,7 +51,7 @@ function Project() {
           <p><strong>Technologies:</strong> ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</p>
         </div>
 
-        {/* 3) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
+        {/* 4) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
         <div className="project">
           <img src={slap} className="zoom" alt="S.L.A.P. Hand" width="50%" />
           <h2>The S.L.A.P. Hand - Remote-Controlled Robotic Hand</h2>
@@ -43,7 +60,7 @@ function Project() {
           </p>
           <p><strong>Technologies:</strong> ESP8266, MPU6050, Haptic Feedback, Wi-Fi Communication</p>
         </div>
-        {/* 4) Foundations of Robotics – SCARA Manipulator Control & Planning */}
+        {/* 5) Foundations of Robotics – SCARA Manipulator Control & Planning */}
         <div className="project">
         <h2>Foundations of Robotics - SCARA Manipulator Control & Planning</h2>
          <p>
@@ -55,7 +72,7 @@ function Project() {
           </p>
         </div>
 
-        {/* 5) B.A.R.K. Door – Smart Pet Access System */}
+        {/* 6) B.A.R.K. Door – Smart Pet Access System */}
         <div className="project">
           <img src={bark} className="zoom" alt="B.A.R.K. Door" width="50%" />
           <h2>B.A.R.K. Door - IoT Pet Access System</h2>
@@ -65,7 +82,7 @@ function Project() {
           <p><strong>Technologies:</strong> BS2, RFID, Bluetooth, IoT, Servo Mechanisms</p>
         </div>
 
-        {/* 6) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
+        {/* 7) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
         <div className="project">
           <img src={esvc} className="zoom" alt="E.S.V.C. Project" width="50%" />
           <h2>E.S.V.C. - Solar-Powered Electric Vehicle</h2>
