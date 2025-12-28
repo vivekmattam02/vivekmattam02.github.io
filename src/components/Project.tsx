@@ -41,7 +41,18 @@ function Project() {
           <p><strong>Technologies:</strong> ROS, C++, Python, Corelink, Sensor Fusion</p>
         </div>
 
-        {/* 3) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
+        {/* 3) Robot Perception Project */}
+        <div className="project">
+          {/* Image placeholder - Add your image here */}
+          {/* <img src={robotPerception} className="zoom" alt="Robot Perception Project" width="37.5%" /> */}
+          <h2>Robot Perception Project</h2>
+          <p>
+            Worked on visual navigation, mapping, and tracking problems throughout my Robot Perception course. The main project was with Team Voyager—we built a system that navigates a maze using only camera images, no GPS or odometry. We used CosPlace descriptors for place recognition and SuperGlue for geometric verification because matching by appearance alone kept giving us false positives in similar-looking corridors. The system builds a topological graph and runs A* for planning. Separately, I worked on 2D mapping using visual odometry with ORB features—tried encoder fusion first but it drifted too much, so visual odometry ended up being cleaner. Also implemented multi-object tracking with YOLOv11 and ByteTrack, and wrote RANSAC plane fitting and ICP point cloud alignment from scratch for KITTI data.
+          </p>
+          <p><strong>Technologies:</strong> PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, Open3D, Python</p>
+        </div>
+
+        {/* 4) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
         <div className="project">
           <img src={vip} className="zoom" alt="NYU Self-Drive" width="37.5%" />
           <h2>NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</h2>
@@ -51,7 +62,7 @@ function Project() {
           <p><strong>Technologies:</strong> ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</p>
         </div>
 
-        {/* 4) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
+        {/* 5) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
         <div className="project">
           <img src={slap} className="zoom" alt="S.L.A.P. Hand" width="37.5%" />
           <h2>The S.L.A.P. Hand - Remote-Controlled Robotic Hand</h2>
@@ -60,7 +71,7 @@ function Project() {
           </p>
           <p><strong>Technologies:</strong> ESP8266, MPU6050, Haptic Feedback, Wi-Fi Communication</p>
         </div>
-        {/* 5) Foundations of Robotics – SCARA Manipulator Control & Planning */}
+        {/* 6) Foundations of Robotics – SCARA Manipulator Control & Planning */}
         <div className="project">
         <h2>Foundations of Robotics - SCARA Manipulator Control & Planning</h2>
          <p>
@@ -72,7 +83,7 @@ function Project() {
           </p>
         </div>
 
-        {/* 6) B.A.R.K. Door – Smart Pet Access System */}
+        {/* 7) B.A.R.K. Door – Smart Pet Access System */}
         <div className="project">
           <img src={bark} className="zoom" alt="B.A.R.K. Door" width="37.5%" />
           <h2>B.A.R.K. Door - IoT Pet Access System</h2>
@@ -82,7 +93,7 @@ function Project() {
           <p><strong>Technologies:</strong> BS2, RFID, Bluetooth, IoT, Servo Mechanisms</p>
         </div>
 
-        {/* 7) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
+        {/* 8) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
         <div className="project">
           <img src={esvc} className="zoom" alt="E.S.V.C. Project" width="37.5%" />
           <h2>E.S.V.C. - Solar-Powered Electric Vehicle</h2>
