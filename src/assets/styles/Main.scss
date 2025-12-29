@@ -4,7 +4,7 @@
 
 .about-section {
     display: flex;
-    gap: 30px;
+    gap: 40px;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
@@ -59,10 +59,10 @@
     display: flex;
     justify-content: center;  /* Center image */
     align-items: center;
-    width: 100%;  /* Ensure it stays inside section */
+    flex-shrink: 0;  /* Don't shrink the image */
     img {
-        width: 150px;
-        height: 150px;  /* Ensure circular shape */
+        width: 200px;
+        height: 200px;  /* Ensure circular shape */
         border-radius: 50%;
         object-fit: cover;  /* Make sure the image fits well */
     }

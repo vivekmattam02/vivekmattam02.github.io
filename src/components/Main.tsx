@@ -22,13 +22,13 @@ function Main() {
           <div className="about-me">
   <h2>About Me</h2>
   <p>
-    Hey! I'm Vivek, and I'm working on my Master's in Mechatronics and Robotics at NYU Tandon. My main interests lie in autonomous navigation, SLAM, and real-time robotic systems. Growing up in an agricultural community, I saw firsthand how the right technology could completely transform an industry—and that's what got me hooked on robotics. It's not just about building cool machines for me; it's about creating systems that actually solve real problems.
+    I'm a Master's student in Mechatronics and Robotics at NYU Tandon. Growing up in rural India, I saw firsthand the challenges of agriculture and inefficient processes. When I visited my grandfather's workplace at Mahindra and watched robots handle tasks that once required intense human labor, something clicked. That's when I realized robotics wasn't just about building cool machines but about creating systems that genuinely solve problems and reduce human burden.
   </p>
   <p>
-    Right now, I'm part of NYU's Self-Drive VIP project, where we're tackling SLAM-based navigation for autonomous robots. Before this, I interned at <strong>Xmachines</strong> (an agricultural robotics startup), working on sensor integration and embedded systems for autonomous farm equipment. I've also competed in the <strong>ESVC Solar Car Championship</strong>—designing energy-efficient vehicle systems alongside 60+ other teams. That experience taught me a lot about working under pressure and thinking creatively when resources are tight.
+    NYU has been an incredible learning experience. I've had the chance to work on a Bell Labs funded project building high-speed navigation systems, train quadruped robots with reinforcement learning in Isaac Lab, and work on visual SLAM and perception for the VIP Self-Drive project. Before coming here, I interned at <strong>Xmachines</strong>, an agricultural robotics startup, where I worked on sensor fusion and motion planning. Every project shows me new gaps in my understanding and pushes me to get better.
   </p>
   <p>
-    What really excites me is the intersection of AI, perception systems, and real-time control. I love the challenge of making robots that can actually understand and adapt to their environment. I'm currently looking for <strong>Summer 2025 internship opportunities</strong> in robotics, autonomous systems, or embedded AI—basically anywhere I can work on making intelligent machines that do meaningful work.
+    Right now, I'm looking for <strong>internship/full-time opportunities</strong> in robotics, autonomous systems, or applied AI. I want to work on projects where the technology actually matters, where robots are solving real problems for real people.
   </p>
 </div>
 

@@ -36,7 +36,7 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Robotics Engineering Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Xmachines - Agricultural Robotics Startup</h4>
             <p>
-              I spent my internship at Xmachines working on autonomous systems for agriculture. The company is building robots that can handle crop monitoring and harvesting autonomously, which is a pretty challenging problem when you consider how unpredictable farm environments can be. Most of my time was spent on sensor integration and optimization—working with the MPU-6050 for motion tracking and the Arducam IMX219 for image processing on Ubuntu 22.04. I also got hands-on with embedded systems like the Jetson Orin Nano, Arduino, and ESP32. One of the bigger challenges was getting the motion planning to work reliably in dynamic environments. We used ROS-based solutions and spent a lot of time testing and refining the navigation. The experience really solidified my understanding of sensor fusion and real-time control.
+              Worked on autonomous systems for agricultural robots handling crop monitoring and harvesting. Focused on sensor integration and optimization using MPU-6050 for motion tracking and Arducam IMX219 for image processing on Ubuntu 22.04. Developed ROS-based motion planning solutions for dynamic farm environments with embedded systems including Jetson Orin Nano, Arduino, and ESP32.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>

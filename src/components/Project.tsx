@@ -14,8 +14,24 @@ function Project() {
       <h1>Projects</h1>
       <div className="projects-grid">
 
-        {/* 1) Reinforcement Learning for Quadruped Locomotion */}
-        <div className="project">
+        {/* 1) High-Speed Autonomous Navigation in Narrow Corridors */}
+        <div className="project no-image">
+          <h2>High-Speed Autonomous Navigation in Narrow Corridors</h2>
+          <p>
+            Developed a ROS 2-based navigation framework for an Ackermann-steered RC car operating in corridors as narrow as 1.2 meters. Built a complete simulation environment in Gazebo Ignition with a custom URDF model addressing the four-bar linkage limitation inherent to Ackermann steering.
+          </p>
+          <p>
+            Implemented a camera-LiDAR fusion perception system with optical flow-based motion tracking and ego-motion compensation, enabling estimation of obstacle velocity relative to the robot. Developed a racing line optimization algorithm that utilizes 92% of corridor width through outside-inside-outside cornering geometry, improving turn efficiency over traditional centerline planners.
+          </p>
+          <p>
+            Integrated the full stack with Nav2, SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture validated through simulation testing.
+          </p>
+          <p><strong>Tech Stack:</strong> ROS 2 Humble, Gazebo Ignition, Nav2, SLAM Toolbox, OpenCV, Python, C++</p>
+          <p><strong>Team:</strong> 3-person team at NYU, funded by Bell Labs</p>
+        </div>
+
+        {/* 2) Reinforcement Learning for Quadruped Locomotion */}
+        <div className="project no-image">
           {/* Video placeholder - Replace VIDEO_URL_HERE with your video URL (YouTube embed, mp4, etc.) */}
           <div className="video-container" style={{ marginBottom: '1rem' }}>
             {/* For YouTube: <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
@@ -31,18 +47,8 @@ function Project() {
           <p><strong>Tools:</strong> Isaac Lab, PyTorch, PPO, NYU HPC</p>
         </div>
 
-        {/* 2) HSRN Robot – Data Center Robot */}
-        <div className="project">
-          <img src={datacenter} className="zoom" alt="HSRN Robot" width="37.5%" />
-          <h2>HSRN Robot - Data Center Automation</h2>
-          <p>
-            At NYU, I'm building a joystick-controlled robot for automating data center tasks. My focus is on developing perception models and multi-robot coordination using sensor fusion to help robots navigate tight spaces and understand their environment in real time. We're using Corelink's C++ client with ROS for inter-robot communication, with plans to transition from manual control to full autonomy.
-          </p>
-          <p><strong>Technologies:</strong> ROS, C++, Python, Corelink, Sensor Fusion</p>
-        </div>
-
         {/* 3) Robot Perception Project */}
-        <div className="project">
+        <div className="project no-image">
           {/* Image placeholder - Add your image here */}
           {/* <img src={robotPerception} className="zoom" alt="Robot Perception Project" width="37.5%" /> */}
           <h2>Robot Perception Project</h2>
@@ -52,27 +58,44 @@ function Project() {
           <p><strong>Technologies:</strong> PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, Open3D, Python</p>
         </div>
 
-        {/* 4) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
+        {/* 4) HSRN Robot – Data Center Robot */}
         <div className="project">
-          <img src={vip} className="zoom" alt="NYU Self-Drive" width="37.5%" />
-          <h2>NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</h2>
-          <p>
-            A research project focused on autonomous indoor navigation using only visual SLAM—no LIDAR, just a monocular camera. I'm handling path planning with A* and robot localization using ORB feature matching. The challenge is making a TurtleBot3 navigate unknown spaces with minimal sensor data, relying on smart graph-based planning and exploration strategies. We're prepping for the Self-Drive Exploration & Navigation Challenge.
-          </p>
-          <p><strong>Technologies:</strong> ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</p>
+          <img src={datacenter} className="zoom project-image" alt="HSRN Robot" />
+          <div className="project-content">
+            <h2>HSRN Robot - Data Center Automation</h2>
+            <p>
+              At NYU, I'm building a joystick-controlled robot for automating data center tasks. My focus is on developing perception models and multi-robot coordination using sensor fusion to help robots navigate tight spaces and understand their environment in real time. We're using Corelink's C++ client with ROS for inter-robot communication, with plans to transition from manual control to full autonomy.
+            </p>
+            <p><strong>Technologies:</strong> ROS, C++, Python, Corelink, Sensor Fusion</p>
+          </div>
         </div>
 
-        {/* 5) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
+        {/* 5) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
         <div className="project">
-          <img src={slap} className="zoom" alt="S.L.A.P. Hand" width="37.5%" />
-          <h2>The S.L.A.P. Hand - Remote-Controlled Robotic Hand</h2>
-          <p>
-            S.L.A.P. (Simultaneous Linked Articulation Project) is a gesture-controlled animatronic hand I started as an undergrad project, now evolving it for handling hazardous materials. It features haptic feedback for tactile sensing and I'm currently upgrading from Bluetooth to wired communication for better stability. Future plans include finger-mounted cameras for object detection and AI-driven grasp optimization.
-          </p>
-          <p><strong>Technologies:</strong> ESP8266, MPU6050, Haptic Feedback, Wi-Fi Communication</p>
+          <img src={vip} className="zoom project-image" alt="NYU Self-Drive" />
+          <div className="project-content">
+            <h2>NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</h2>
+            <p>
+              A research project focused on autonomous indoor navigation using only visual SLAM—no LIDAR, just a monocular camera. I'm handling path planning with A* and robot localization using ORB feature matching. The challenge is making a TurtleBot3 navigate unknown spaces with minimal sensor data, relying on smart graph-based planning and exploration strategies. We're prepping for the Self-Drive Exploration & Navigation Challenge.
+            </p>
+            <p><strong>Technologies:</strong> ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</p>
+          </div>
         </div>
-        {/* 6) Foundations of Robotics – SCARA Manipulator Control & Planning */}
+
+        {/* 6) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
         <div className="project">
+          <img src={slap} className="zoom project-image" alt="S.L.A.P. Hand" />
+          <div className="project-content">
+            <h2>The S.L.A.P. Hand - Gesture-Controlled Robotic Hand</h2>
+            <p>
+              S.L.A.P. (Simultaneous Linked Articulation Project) started as my undergraduate major project and has evolved significantly over time. I began with Arduino and flex sensors for basic finger tracking, then transitioned to Propeller microcontrollers for better multi-servo control, and eventually moved to Raspberry Pi for more computational power. The biggest shift came when I moved from flex sensors to vision-based manipulation using Google's Mediapipe for hand tracking, enabling more natural gesture control without wearable sensors. The system now includes haptic feedback for tactile sensing and I'm exploring applications for handling hazardous materials.
+            </p>
+            <p><strong>Technologies:</strong> Raspberry Pi, Arduino, Propeller, Google Mediapipe, MPU6050, Haptic Feedback, Servo Control</p>
+          </div>
+        </div>
+
+        {/* 7) Foundations of Robotics – SCARA Manipulator Control & Planning */}
+        <div className="project no-image">
         <h2>Foundations of Robotics - SCARA Manipulator Control & Planning</h2>
          <p>
           A three-phase project building progressive control systems for a 4-DOF SCARA manipulator. I implemented inverse kinematics using Jacobian methods, added real-time obstacle avoidance with Null-Space Projection, and designed dynamic control with trapezoidal velocity profiles accounting for inertia and external forces. All simulations were done in MATLAB and Simulink.
@@ -83,24 +106,28 @@ function Project() {
           </p>
         </div>
 
-        {/* 7) B.A.R.K. Door – Smart Pet Access System */}
+        {/* 8) B.A.R.K. Door – Smart Pet Access System */}
         <div className="project">
-          <img src={bark} className="zoom" alt="B.A.R.K. Door" width="37.5%" />
-          <h2>B.A.R.K. Door - IoT Pet Access System</h2>
-          <p>
-            B.A.R.K. (Bluetooth Actuated Remote Key) Door is a smart pet door using RFID tags to recognize authorized pets and Bluetooth for manual control. Built with a BS2 microcontroller and servo mechanisms for the locking system. Currently exploring Wi-Fi integration and AI-based behavioral tracking for smarter automation.
-          </p>
-          <p><strong>Technologies:</strong> BS2, RFID, Bluetooth, IoT, Servo Mechanisms</p>
+          <img src={bark} className="zoom project-image" alt="B.A.R.K. Door" />
+          <div className="project-content">
+            <h2>B.A.R.K. Door - IoT Pet Access System</h2>
+            <p>
+              B.A.R.K. (Bluetooth Actuated Remote Key) Door is a smart pet door using RFID tags to recognize authorized pets and Bluetooth for manual control. Built with a BS2 microcontroller and servo mechanisms for the locking system. Currently exploring Wi-Fi integration and AI-based behavioral tracking for smarter automation.
+            </p>
+            <p><strong>Technologies:</strong> BS2, RFID, Bluetooth, IoT, Servo Mechanisms</p>
+          </div>
         </div>
 
-        {/* 8) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
+        {/* 9) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
         <div className="project">
-          <img src={esvc} className="zoom" alt="E.S.V.C. Project" width="37.5%" />
-          <h2>E.S.V.C. - Solar-Powered Electric Vehicle</h2>
-          <p>
-            As part of Team Solarians 4.0, I designed the chassis for our entry in the Electric Solar Vehicle Championship (competing against 60+ teams). Using CATIA V5 for CAD and ANSYS R16.2 for structural analysis, I optimized an AISI 4130 steel tubular frame to balance lightweight design with racing durability while meeting ESVC safety requirements.
-          </p>
-          <p><strong>Technologies:</strong> CATIA V5, ANSYS R16.2</p>
+          <img src={esvc} className="zoom project-image" alt="E.S.V.C. Project" />
+          <div className="project-content">
+            <h2>E.S.V.C. - Solar-Powered Electric Vehicle</h2>
+            <p>
+              As part of Team Solarians 4.0, I designed the chassis for our entry in the Electric Solar Vehicle Championship (competing against 60+ teams). Using CATIA V5 for CAD and ANSYS R16.2 for structural analysis, I optimized an AISI 4130 steel tubular frame to balance lightweight design with racing durability while meeting ESVC safety requirements.
+            </p>
+            <p><strong>Technologies:</strong> CATIA V5, ANSYS R16.2</p>
+          </div>
         </div>
 
       </div>
