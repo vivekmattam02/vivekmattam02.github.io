@@ -2,6 +2,32 @@
     background-color: rgba(0, 0, 0, 0.2);
 }
 
+/* Light mode styles for About section */
+.about-section .content p {
+    color: #333333;  /* Dark text for light mode */
+}
+
+.about-section .content h1 {
+    color: #222222;  /* Dark heading for light mode */
+}
+
+.about-section .content .social_icons {
+    color: #333333;  /* Dark icons for light mode */
+}
+
+/* Dark mode overrides */
+.dark-mode .about-section .content p {
+    color: #E0E0E0;  /* Light text for dark mode */
+}
+
+.dark-mode .about-section .content h1 {
+    color: white;
+}
+
+.dark-mode .about-section .content .social_icons {
+    color: white;
+}
+
 .about-section {
     display: flex;
     gap: 40px;
