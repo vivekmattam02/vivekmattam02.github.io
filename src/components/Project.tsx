@@ -47,15 +47,19 @@ function Project() {
           <p><strong>Tools:</strong> Isaac Lab, PyTorch, PPO, NYU HPC</p>
         </div>
 
-        {/* 3) Robot Perception Project */}
-        <div className="project no-image">
-          {/* Image placeholder - Add your image here */}
-          {/* <img src={robotPerception} className="zoom" alt="Robot Perception Project" width="37.5%" /> */}
-          <h2>Robot Perception Project</h2>
-          <p>
-            Worked on visual navigation, mapping, and tracking problems throughout my Robot Perception course. The main project was with Team Voyager—we built a system that navigates a maze using only camera images, no GPS or odometry. We used CosPlace descriptors for place recognition and SuperGlue for geometric verification because matching by appearance alone kept giving us false positives in similar-looking corridors. The system builds a topological graph and runs A* for planning. Separately, I worked on 2D mapping using visual odometry with ORB features—tried encoder fusion first but it drifted too much, so visual odometry ended up being cleaner. Also implemented multi-object tracking with YOLOv11 and ByteTrack, and wrote RANSAC plane fitting and ICP point cloud alignment from scratch for KITTI data.
-          </p>
-          <p><strong>Technologies:</strong> PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, Open3D, Python</p>
+        {/* 3) Robot Perception: VIP Self-Drive */}
+        <div className="project">
+          <img src={vip} className="zoom project-image" alt="Robot Perception VIP Self-Drive" />
+          <div className="project-content">
+            <h2>Robot Perception: VIP Self-Drive</h2>
+            <p>
+              Working on autonomous indoor navigation for TurtleBot3 using only visual SLAM—no LIDAR, just a monocular camera. I handle path planning with A* and robot localization using ORB feature matching, building systems that navigate unknown spaces with minimal sensor data. As part of Team Voyager, we built a maze navigation system using CosPlace descriptors for place recognition and SuperGlue for geometric verification, with topological graph-based planning.
+            </p>
+            <p>
+              Beyond navigation, I've worked on 2D mapping with visual odometry using ORB features, multi-object tracking with YOLOv11 and ByteTrack, and implemented RANSAC plane fitting and ICP point cloud alignment from scratch for KITTI data. Currently prepping for the Self-Drive Exploration & Navigation Challenge.
+            </p>
+            <p><strong>Technologies:</strong> ROS 2 Humble, PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, Open3D, ORB SLAM, TurtleBot3, Python, C++</p>
+          </div>
         </div>
 
         {/* 4) HSRN Robot – Data Center Robot */}
@@ -70,19 +74,7 @@ function Project() {
           </div>
         </div>
 
-        {/* 5) NYU VIP Self-Drive – Autonomous Navigation & Visual SLAM */}
-        <div className="project">
-          <img src={vip} className="zoom project-image" alt="NYU Self-Drive" />
-          <div className="project-content">
-            <h2>NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</h2>
-            <p>
-              A research project focused on autonomous indoor navigation using only visual SLAM—no LIDAR, just a monocular camera. I'm handling path planning with A* and robot localization using ORB feature matching. The challenge is making a TurtleBot3 navigate unknown spaces with minimal sensor data, relying on smart graph-based planning and exploration strategies. We're prepping for the Self-Drive Exploration & Navigation Challenge.
-            </p>
-            <p><strong>Technologies:</strong> ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</p>
-          </div>
-        </div>
-
-        {/* 6) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
+        {/* 5) The S.L.A.P. Hand – Evolving My Animatronic Hand Project */}
         <div className="project">
           <img src={slap} className="zoom project-image" alt="S.L.A.P. Hand" />
           <div className="project-content">
@@ -94,7 +86,7 @@ function Project() {
           </div>
         </div>
 
-        {/* 7) Foundations of Robotics – SCARA Manipulator Control & Planning */}
+        {/* 6) Foundations of Robotics – SCARA Manipulator Control & Planning */}
         <div className="project no-image">
         <h2>Foundations of Robotics - SCARA Manipulator Control & Planning</h2>
          <p>
@@ -106,7 +98,7 @@ function Project() {
           </p>
         </div>
 
-        {/* 8) B.A.R.K. Door – Smart Pet Access System */}
+        {/* 7) B.A.R.K. Door – Smart Pet Access System */}
         <div className="project">
           <img src={bark} className="zoom project-image" alt="B.A.R.K. Door" />
           <div className="project-content">
@@ -118,7 +110,7 @@ function Project() {
           </div>
         </div>
 
-        {/* 9) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
+        {/* 8) E.S.V.C. – Solar-Powered Electric Vehicle for Sustainable Mobility */}
         <div className="project">
           <img src={esvc} className="zoom project-image" alt="E.S.V.C. Project" />
           <div className="project-content">
