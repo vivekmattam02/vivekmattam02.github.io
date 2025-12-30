@@ -33,7 +33,7 @@ function Project() {
 
         {/* 2) Reinforcement Learning for Quadruped Locomotion */}
         <div className="project">
-          <img src={rlQuadruped} className="zoom project-image" alt="Reinforcement Learning Quadruped" />
+          <img src={rlQuadruped} className="zoom project-image" alt="Reinforcement Learning Quadruped" style={{ width: '300px', minWidth: '300px', maxHeight: '300px' }} />
           <div className="project-content">
             <h2>Reinforcement Learning for Quadruped Locomotion</h2>
           <p>
