@@ -7,6 +7,7 @@ import esvc from '../assets/images/esvc.jpg';
 import vip from '../assets/images/vip.jpg';
 import bark from '../assets/images/bark.jpg';
 import slap from '../assets/images/slap.jpg';
+import rlQuadruped from '../assets/images/rl_quadruped.gif';
 
 function Project() {
   return (
@@ -31,20 +32,15 @@ function Project() {
         </div>
 
         {/* 2) Reinforcement Learning for Quadruped Locomotion */}
-        <div className="project no-image">
-          {/* Video placeholder - Replace VIDEO_URL_HERE with your video URL (YouTube embed, mp4, etc.) */}
-          <div className="video-container" style={{ marginBottom: '1rem' }}>
-            {/* For YouTube: <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
-            {/* For MP4: <video width="100%" controls><source src="VIDEO_URL_HERE" type="video/mp4" />Your browser does not support the video tag.</video> */}
-            <div style={{ width: '100%', height: '315px', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', border: '2px dashed #ccc' }}>
-              <p style={{ color: '#666', textAlign: 'center' }}>Video placeholder<br/>Replace with your video URL in Project.tsx</p>
-            </div>
-          </div>
-          <h2>Reinforcement Learning for Quadruped Locomotion</h2>
+        <div className="project">
+          <img src={rlQuadruped} className="zoom project-image" alt="Reinforcement Learning Quadruped" />
+          <div className="project-content">
+            <h2>Reinforcement Learning for Quadruped Locomotion</h2>
           <p>
             Trained a Unitree Go2 robot to walk using PPO in NVIDIA Isaac Lab. Implemented reward shaping for smooth actions, gait coordination (Raibert heuristic), and body stability. Added an actuator friction model with domain randomization for sim-to-real transfer. The final policy tracks velocity commands at nearly 2x the baseline targets on both flat and rough terrain.
           </p>
           <p><strong>Tools:</strong> Isaac Lab, PyTorch, PPO, NYU HPC</p>
+          </div>
         </div>
 
         {/* 3) Robot Perception: VIP Self-Drive */}
