@@ -28,8 +28,7 @@ function Project() {
             Integrated the full stack with Nav2, SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture validated through simulation testing.
           </p>
           <p><strong>Tech Stack:</strong> ROS 2 Humble, Gazebo Ignition, Nav2, SLAM Toolbox, OpenCV, Python, C++</p>
-          <p><strong>Team:</strong> 3-person team at NYU, funded by Bell Labs</p>
-          <p><a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation" target="_blank" rel="noopener noreferrer"><strong>GitHub Repository →</strong></a></p>
+          <p><strong>Team:</strong> 3-person team at NYU, funded by Bell Labs &nbsp;|&nbsp; <a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
         </div>
 
         {/* 2) Reinforcement Learning for Quadruped Locomotion */}
@@ -40,8 +39,7 @@ function Project() {
           <p>
             Trained a Unitree Go2 robot to walk using PPO in NVIDIA Isaac Lab. Implemented reward shaping for smooth actions, gait coordination (Raibert heuristic), and body stability. Added an actuator friction model with domain randomization for sim-to-real transfer. The final policy tracks velocity commands at nearly 2x the baseline targets on both flat and rough terrain.
           </p>
-          <p><strong>Tools:</strong> Isaac Lab, PyTorch, PPO, NYU HPC</p>
-          <p><a href="https://github.com/Nishant-ZFYII/rob6323_go2_project" target="_blank" rel="noopener noreferrer"><strong>GitHub Repository →</strong></a></p>
+          <p><strong>Tools:</strong> Isaac Lab, PyTorch, PPO, NYU HPC &nbsp;|&nbsp; <a href="https://github.com/Nishant-ZFYII/rob6323_go2_project" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
           </div>
         </div>
 
