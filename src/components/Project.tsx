@@ -8,6 +8,7 @@ import vip from '../assets/images/vip.jpg';
 import bark from '../assets/images/bark.jpg';
 import slap from '../assets/images/slap.jpg';
 import rlQuadruped from '../assets/images/rl_quadruped.gif';
+import earthrover from '../assets/images/earthrover.jpg';
 
 function Project() {
   return (
@@ -44,15 +45,18 @@ function Project() {
         </div>
 
         {/* 3) CityWalker-EarthRover Integration */}
-        <div className="project no-image">
-          <h2>CityWalker-EarthRover Integration</h2>
-          <p>
-            Deploying a vision-based navigation model (CityWalker, CVPR 2025) from my lab onto a FrodoBots EarthRover robot. The model learned urban navigation from YouTube walking videos and was never trained on this robot—a zero-shot transfer problem.
-          </p>
-          <p>
-            The system takes camera feeds, predicts waypoints through the model, and converts them to motor commands. Currently working on the integration layer: coordinate transforms, trajectory tracking, and controller tuning.
-          </p>
-          <p><strong>Status:</strong> In Progress &nbsp;|&nbsp; <a href="https://github.com/vivekmattam02/citywalker-earthrover" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
+        <div className="project">
+          <img src={earthrover} className="zoom project-image" alt="CityWalker EarthRover" />
+          <div className="project-content">
+            <h2>CityWalker-EarthRover Integration</h2>
+            <p>
+              Deploying a vision-based navigation model (CityWalker, CVPR 2025) from my lab onto a FrodoBots EarthRover robot. The model learned urban navigation from YouTube walking videos and was never trained on this robot—a zero-shot transfer problem.
+            </p>
+            <p>
+              The system takes camera feeds, predicts waypoints through the model, and converts them to motor commands. Currently working on the integration layer: coordinate transforms, trajectory tracking, and controller tuning.
+            </p>
+            <p><strong>Status:</strong> In Progress &nbsp;|&nbsp; <a href="https://github.com/vivekmattam02/citywalker-earthrover" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
+          </div>
         </div>
 
         {/* 4) Robot Perception: VIP Self-Drive */}
