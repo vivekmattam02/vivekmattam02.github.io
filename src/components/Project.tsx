@@ -43,7 +43,19 @@ function Project() {
           </div>
         </div>
 
-        {/* 3) Robot Perception: VIP Self-Drive */}
+        {/* 3) CityWalker-EarthRover Integration */}
+        <div className="project no-image">
+          <h2>CityWalker-EarthRover Integration</h2>
+          <p>
+            Deploying a vision-based navigation model (CityWalker, CVPR 2025) from my lab onto a FrodoBots EarthRover robot. The model learned urban navigation from YouTube walking videos and was never trained on this robot—a zero-shot transfer problem.
+          </p>
+          <p>
+            The system takes camera feeds, predicts waypoints through the model, and converts them to motor commands. Currently working on the integration layer: coordinate transforms, trajectory tracking, and controller tuning.
+          </p>
+          <p><strong>Status:</strong> In Progress &nbsp;|&nbsp; <a href="https://github.com/vivekmattam02/citywalker-earthrover" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
+        </div>
+
+        {/* 4) Robot Perception: VIP Self-Drive */}
         <div className="project">
           <img src={vip} className="zoom project-image" alt="Robot Perception VIP Self-Drive" />
           <div className="project-content">
