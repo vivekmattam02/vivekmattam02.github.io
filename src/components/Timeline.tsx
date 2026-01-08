@@ -36,7 +36,10 @@ function Timeline() {
             <h3 className="vertical-timeline-element-title">Robotics Engineering Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">Xmachines - Agricultural Robotics Startup</h4>
             <p>
-              Worked on autonomous systems for agricultural robots handling crop monitoring and harvesting. Focused on sensor integration and optimization using MPU-6050 for motion tracking and Arducam IMX219 for image processing on Ubuntu 22.04. Developed ROS-based motion planning solutions for dynamic farm environments with embedded systems including Jetson Orin Nano, Arduino, and ESP32.
+              Built a Flask server for real-time sensor streaming—integrating MPU-6050 IMU data and Arducam IMX219 camera feeds into a unified interface for robot state monitoring. Developed an object detection tunnel for the weeder robot that uses vision-based size classification to sort and route different-sized objects into collection boxes.
+            </p>
+            <p>
+              Worked with embedded systems (Jetson Orin Nano, Arduino, ESP32) and developed ROS-based motion planning for dynamic farm environments on Ubuntu 22.04.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
