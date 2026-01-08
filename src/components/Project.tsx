@@ -26,10 +26,10 @@ function Project() {
             Implemented a camera-LiDAR fusion perception system with optical flow-based motion tracking and ego-motion compensation, enabling estimation of obstacle velocity relative to the robot. Developed a racing line optimization algorithm that utilizes 92% of corridor width through outside-inside-outside cornering geometry, improving turn efficiency over traditional centerline planners.
           </p>
           <p>
-            Integrated the full stack with Nav2, SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture validated through simulation testing.
+            Integrated the full stack with Nav2, SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture validated through simulation testing. Currently deploying the system on a real Traxxas RC car as part of my MS project.
           </p>
           <p><strong>Tech Stack:</strong> ROS 2 Humble, Gazebo Ignition, Nav2, SLAM Toolbox, OpenCV, Python, C++</p>
-          <p><strong>Team:</strong> 3-person team at NYU, funded by Bell Labs &nbsp;|&nbsp; <a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
+          <p><strong>Team:</strong> 3-person team at NYU, funded by Bell Labs (MS Project) &nbsp;|&nbsp; <a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation" target="_blank" rel="noopener noreferrer"><strong>GitHub →</strong></a></p>
         </div>
 
         {/* 2) Reinforcement Learning for Quadruped Locomotion */}
