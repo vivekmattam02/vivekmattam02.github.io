@@ -116,11 +116,15 @@
                         <br>
                         <p></p>
                         <p>
-                            Worked on autonomous systems for agricultural robots handling crop monitoring and harvesting.
-                            Focused on sensor integration and optimization using MPU-6050 for motion tracking and Arducam
-                            IMX219 for image processing on Ubuntu 22.04. Developed ROS-based motion planning solutions for
-                            dynamic farm environments with embedded systems including Jetson Orin Nano, Arduino, and ESP32.
+                            Built a Flask server for real-time sensor streaming—integrating MPU-6050 IMU data and Arducam IMX219 camera feeds into a unified monitoring interface. This allowed the team to debug and visualize robot state in real-time during field tests.
                         </p>
+                        <p>
+                            Developed an object detection tunnel for the weeder robot using computer vision to classify objects by size and route them into the correct collection boxes—essentially automating the sorting process that was previously done manually.
+                        </p>
+                        <p>
+                            Also worked on ROS-based motion planning for navigation in dynamic farm environments, with embedded systems including Jetson Orin Nano, Arduino, and ESP32.
+                        </p>
+                        <p><em>Tech: ROS, C++, Python, Embedded Systems, Jetson Orin Nano, Ubuntu 22.04</em></p>
                     </td>
                 </tr>
 
@@ -167,12 +171,13 @@
                             URDF model addressing the four-bar linkage limitation inherent to Ackermann steering.
                         </p>
                         <p>
-                            Implemented a camera-LiDAR fusion perception system with optical flow-based motion tracking and 
-                            ego-motion compensation. Developed a racing line optimization algorithm that utilizes 92% of corridor 
-                            width through outside-inside-outside cornering geometry. Integrated the full stack with Nav2, 
-                            SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture.
+                            Implemented a camera-LiDAR fusion perception system with optical flow-based motion tracking and
+                            ego-motion compensation. Developed a racing line optimization algorithm that utilizes 92% of corridor
+                            width through outside-inside-outside cornering geometry. Integrated the full stack with Nav2,
+                            SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture validated through simulation testing. Currently deploying the system on a real Traxxas RC car as part of my MS project.
                         </p>
                         <p><em>Tech: ROS 2 Humble, Gazebo Ignition, Nav2, SLAM Toolbox, OpenCV, Python, C++</em></p>
+                        <p><em>Team: 3-person team at NYU, funded by Bell Labs (MS Project)</em> | <a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation">GitHub →</a></p>
                     </td>
                 </tr>
 
@@ -192,46 +197,66 @@
                         <br>
                         <p></p>
                         <p>
-                            Trained a Unitree Go2 robot to walk using PPO in NVIDIA Isaac Lab. Implemented reward shaping 
-                            for smooth actions, gait coordination (Raibert heuristic), and body stability. Added an actuator 
-                            friction model with domain randomization for sim-to-real transfer. The final policy tracks velocity 
+                            Trained a Unitree Go2 robot to walk using PPO in NVIDIA Isaac Lab. Implemented reward shaping
+                            for smooth actions, gait coordination (Raibert heuristic), and body stability. Added an actuator
+                            friction model with domain randomization for sim-to-real transfer. The final policy tracks velocity
                             commands at nearly 2x the baseline targets on both flat and rough terrain.
                         </p>
-                        <p><em>Tools: Isaac Lab, PyTorch, PPO, NYU HPC</em></p>
+                        <p><em>Tools: Isaac Lab, PyTorch, PPO, NYU HPC</em> | <a href="https://github.com/Nishant-ZFYII/rob6323_go2_project">GitHub →</a></p>
                     </td>
                 </tr>
 
-                <!-- 3) Robot Perception Project -->
+                <!-- 3) CityWalker-EarthRover Integration -->
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
-                            <img src="images/perception.jpg" width="200" alt="Robot Perception">
+                            <img src="images/earthrover.jpg" width="200" alt="CityWalker EarthRover">
                         </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                        <span class="papertitle">Visual Navigation and Robot Perception</span>
+                        <span class="papertitle">CityWalker-EarthRover Integration</span>
                         <br>
-                        <strong>Vivekananda Swamy Mattam</strong>, Team Voyager
+                        <strong>Vivekananda Swamy Mattam</strong>
                         <br>
-                        <em>ROB-GY 6203: Robot Perception, NYU</em>
+                        <em>NYU</em>, 2024-Present
                         <br>
                         <p></p>
                         <p>
-                            Built a system that navigates a maze using only camera images, no GPS or odometry. Used CosPlace 
-                            descriptors for place recognition and SuperGlue for geometric verification because matching by 
-                            appearance alone kept giving false positives in similar-looking corridors. The system builds a 
-                            topological graph and runs A* for planning.
+                            Deploying a vision-based navigation model (CityWalker, CVPR 2025) from my lab onto a FrodoBots EarthRover robot. The model learned urban navigation from YouTube walking videos and was never trained on this robot—a zero-shot transfer problem.
                         </p>
                         <p>
-                            Separately implemented 2D mapping using visual odometry with ORB features, multi-object tracking 
-                            with YOLOv11 and ByteTrack, and wrote RANSAC plane fitting and ICP point cloud alignment from 
-                            scratch for KITTI data.
+                            The system takes camera feeds, predicts waypoints through the model, and converts them to motor commands. Currently working on the integration layer: coordinate transforms, trajectory tracking, and controller tuning.
                         </p>
-                        <p><em>Tech: PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, Open3D</em></p>
+                        <p><em>Status: In Progress</em> | <a href="https://github.com/vivekmattam02/citywalker-earthrover">GitHub →</a></p>
                     </td>
                 </tr>
 
-                <!-- 4) HSRN Robot - Data Center -->
+                <!-- 4) Robot Perception: VIP Self-Drive -->
+                <tr>
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <img src="images/vip.jpg" width="200" alt="Robot Perception VIP Self-Drive">
+                        </div>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <span class="papertitle">Robot Perception: VIP Self-Drive</span>
+                        <br>
+                        <strong>Vivekananda Swamy Mattam</strong>, Team Voyager
+                        <br>
+                        <em>NYU Vertically Integrated Projects</em>
+                        <br>
+                        <p></p>
+                        <p>
+                            Working on autonomous indoor navigation for TurtleBot3 using only visual SLAM—no LIDAR, just a monocular camera. I handle path planning with A* and robot localization using ORB feature matching, building systems that navigate unknown spaces with minimal sensor data. As part of Team Voyager, we built a maze navigation system using CosPlace descriptors for place recognition and SuperGlue for geometric verification, with topological graph-based planning.
+                        </p>
+                        <p>
+                            Beyond navigation, I've worked on 2D mapping with visual odometry using ORB features, multi-object tracking with YOLOv11 and ByteTrack, and implemented RANSAC plane fitting and ICP point cloud alignment from scratch for KITTI data. Currently prepping for the Self-Drive Exploration & Navigation Challenge.
+                        </p>
+                        <p><em>Tech: ROS 2 Humble, PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, Open3D, ORB SLAM, TurtleBot3, Python, C++</em></p>
+                    </td>
+                </tr>
+
+                <!-- 5) HSRN Robot - Data Center -->
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
@@ -247,38 +272,9 @@
                         <br>
                         <p></p>
                         <p>
-                            Building a joystick-controlled robot for automating data center tasks. Focus on developing 
-                            perception models and multi-robot coordination using sensor fusion to help robots navigate 
-                            tight spaces and understand their environment in real time. Using Corelink's C++ client with 
-                            ROS for inter-robot communication, with plans to transition from manual control to full autonomy.
+                            At NYU, I'm building a joystick-controlled robot for automating data center tasks. My focus is on developing perception models and multi-robot coordination using sensor fusion to help robots navigate tight spaces and understand their environment in real time. We're using Corelink's C++ client with ROS for inter-robot communication, with plans to transition from manual control to full autonomy.
                         </p>
                         <p><em>Tech: ROS, C++, Python, Corelink, Sensor Fusion</em></p>
-                    </td>
-                </tr>
-
-                <!-- 5) VIP Self-Drive -->
-                <tr>
-                    <td style="padding:20px;width:25%;vertical-align:middle">
-                        <div class="one">
-                            <img src="images/vip.jpg" width="200" alt="VIP Self-Drive">
-                        </div>
-                    </td>
-                    <td style="padding:20px;width:75%;vertical-align:middle">
-                        <span class="papertitle">NYU VIP Self-Drive - Autonomous Navigation & Visual SLAM</span>
-                        <br>
-                        <strong>Vivekananda Swamy Mattam</strong>
-                        <br>
-                        <em>NYU Vertically Integrated Projects</em>
-                        <br>
-                        <p></p>
-                        <p>
-                            Research project focused on autonomous indoor navigation using only visual SLAM—no LIDAR, 
-                            just a monocular camera. Handling path planning with A* and robot localization using ORB 
-                            feature matching. The challenge is making a TurtleBot3 navigate unknown spaces with minimal 
-                            sensor data, relying on smart graph-based planning and exploration strategies. Preparing 
-                            for the Self-Drive Exploration & Navigation Challenge.
-                        </p>
-                        <p><em>Tech: ROS 2 Humble, A*, ORB SLAM, TurtleBot3, OpenCV, C++</em></p>
                     </td>
                 </tr>
 
@@ -298,14 +294,9 @@
                         <br>
                         <p></p>
                         <p>
-                            S.L.A.P. (Simultaneous Linked Articulation Project) started as my undergraduate major project 
-                            and has evolved significantly. Began with Arduino and flex sensors for basic finger tracking, 
-                            then transitioned to Propeller microcontrollers for better multi-servo control, and eventually 
-                            moved to Raspberry Pi. The biggest shift came when I moved from flex sensors to vision-based 
-                            manipulation using Google's Mediapipe for hand tracking, enabling more natural gesture control 
-                            without wearable sensors. The system now includes haptic feedback for tactile sensing.
+                            S.L.A.P. (Simultaneous Linked Articulation Project) started as my undergraduate major project and has evolved significantly over time. I began with Arduino and flex sensors for basic finger tracking, then transitioned to Propeller microcontrollers for better multi-servo control, and eventually moved to Raspberry Pi for more computational power. The biggest shift came when I moved from flex sensors to vision-based manipulation using Google's Mediapipe for hand tracking, enabling more natural gesture control without wearable sensors. The system now includes haptic feedback for tactile sensing and I'm exploring applications for handling hazardous materials.
                         </p>
-                        <p><em>Tech: Raspberry Pi, Arduino, Propeller, Google Mediapipe, MPU6050, Haptic Feedback</em></p>
+                        <p><em>Tech: Raspberry Pi, Arduino, Propeller, Google Mediapipe, MPU6050, Haptic Feedback, Servo Control</em></p>
                     </td>
                 </tr>
 
@@ -325,12 +316,10 @@
                         <br>
                         <p></p>
                         <p>
-                            Three-phase project building progressive control systems for a 4-DOF SCARA manipulator. 
-                            Implemented inverse kinematics using Jacobian methods, added real-time obstacle avoidance 
-                            with Null-Space Projection, and designed dynamic control with trapezoidal velocity profiles 
-                            accounting for inertia and external forces.
+                            A three-phase project building progressive control systems for a 4-DOF SCARA manipulator. I implemented inverse kinematics using Jacobian methods, added real-time obstacle avoidance with Null-Space Projection, and designed dynamic control with trapezoidal velocity profiles accounting for inertia and external forces. All simulations were done in MATLAB and Simulink.
                         </p>
-                        <p><em>Tech: MATLAB, Simulink, VR Visualization</em></p>
+                        <p><em>Tools: MATLAB, Simulink, SCARA Simulation, VR Visualization</em><br>
+                        <em>Key Concepts: Inverse Kinematics, Null-Space Control, Trajectory Planning, Inverse Dynamics</em></p>
                     </td>
                 </tr>
 
