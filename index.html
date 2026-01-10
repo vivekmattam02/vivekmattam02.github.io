@@ -154,7 +154,12 @@
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
-                            <img src="images/highspeed_nav.jpg" width="200" alt="High-Speed Navigation">
+                            <img src="images/bellabs_nav.png" width="200" alt="High-Speed Navigation">
+                        </div>
+                        <div style="margin-top:10px;">
+                            <a href="https://youtu.be/EOe9tmgbaLE" target="_blank">
+                                <img src="https://img.youtube.com/vi/EOe9tmgbaLE/0.jpg" width="200" alt="Demo Video" style="border-radius:5px;">
+                            </a>
                         </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
@@ -166,8 +171,8 @@
                         <br>
                         <p></p>
                         <p>
-                            Developed a ROS 2-based navigation framework for an Ackermann-steered RC car operating in corridors 
-                            as narrow as 1.2 meters. Built a complete simulation environment in Gazebo Ignition with a custom 
+                            Developed a ROS 2-based navigation framework for an Ackermann-steered RC car operating in corridors
+                            as narrow as 1.2 meters. Built a complete simulation environment in Gazebo Ignition with a custom
                             URDF model addressing the four-bar linkage limitation inherent to Ackermann steering.
                         </p>
                         <p>
@@ -177,7 +182,7 @@
                             SLAM Toolbox, EKF localization, and MPPI control, creating a 60+ node architecture validated through simulation testing. Currently deploying the system on a real Traxxas RC car as part of my MS project.
                         </p>
                         <p><em>Tech: ROS 2 Humble, Gazebo Ignition, Nav2, SLAM Toolbox, OpenCV, Python, C++</em></p>
-                        <p><em>Team: 3-person team at NYU, funded by Bell Labs (MS Project)</em> | <a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation">GitHub →</a></p>
+                        <p><em>Team: 3-person team at NYU, funded by Bell Labs (MS Project)</em> | <a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation">GitHub →</a> | <a href="https://youtu.be/EOe9tmgbaLE">Video →</a></p>
                     </td>
                 </tr>
 
@@ -206,7 +211,49 @@
                     </td>
                 </tr>
 
-                <!-- 3) CityWalker-EarthRover Integration -->
+                <!-- 3) Lunar Autonomy Challenge -->
+                <tr>
+                    <td style="padding:20px;width:25%;vertical-align:middle">
+                        <div class="one">
+                            <img src="images/lunar.png" width="200" alt="Lunar Autonomy Challenge">
+                        </div>
+                        <div style="margin-top:10px;">
+                            <img src="images/orbslam3andfoundationstereo.png" width="200" alt="ORB-SLAM3 and FoundationStereo" style="border-radius:5px;">
+                        </div>
+                        <div style="margin-top:10px;">
+                            <a href="https://www.youtube.com/watch?v=JbqZYXgmWIo" target="_blank">
+                                <img src="https://img.youtube.com/vi/JbqZYXgmWIo/0.jpg" width="200" alt="Demo Video 1" style="border-radius:5px;">
+                            </a>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <a href="https://www.youtube.com/watch?v=Z1Es9lCJMzk" target="_blank">
+                                <img src="https://img.youtube.com/vi/Z1Es9lCJMzk/0.jpg" width="200" alt="Demo Video 2" style="border-radius:5px;">
+                            </a>
+                        </div>
+                    </td>
+                    <td style="padding:20px;width:75%;vertical-align:middle">
+                        <span class="papertitle">Lunar Autonomy Challenge - Autonomous Navigation Stack</span>
+                        <br>
+                        <strong>Vivekananda Swamy Mattam</strong>
+                        <br>
+                        <em>NASA-style Lunar Autonomy Challenge</em>, 2024-Present
+                        <br>
+                        <p></p>
+                        <p>
+                            Developing a complete autonomous navigation system for the NASA-style Lunar Autonomy Challenge, where a simulated rover must explore unknown lunar terrain, avoid hazards, and return to its landing site without GPS or prior maps. The system integrates visual SLAM for localization, deep learning-based stereo depth estimation, and perception-aware path planning that explicitly reasons about sensor uncertainty.
+                        </p>
+                        <p>
+                            The perception pipeline combines ORB-SLAM3 for real-time visual odometry and mapping with FoundationStereo, a foundation model for stereo matching that provides robust depth estimation in the challenging lighting conditions of the lunar environment. Unlike traditional navigation stacks that treat depth as ground truth, this system propagates uncertainty through the entire pipeline—from stereo matching confidence to voxel grid occupancy to costmap weights—enabling the planner to actively avoid regions where perception is unreliable, such as shadowed craters and texture-poor surfaces.
+                        </p>
+                        <p>
+                            The navigation stack implements a full autonomy loop: stereo depth estimation feeds into a 3D voxel grid, which is projected to a 2D height map and converted into a perception-aware costmap that penalizes obstacles, uncertainty, and shadows. An A* planner generates paths that balance distance-to-goal against perception risk, while a trajectory smoother and pure pursuit controller execute the motion.
+                        </p>
+                        <p><em>Tech: Python, C++, ORB-SLAM3, FoundationStereo, OpenCV, NumPy, ROS2, PyTorch</em></p>
+                        <p><a href="https://github.com/vivekmattam02/LAC_26">GitHub →</a> | <a href="https://www.youtube.com/watch?v=JbqZYXgmWIo">Video 1 →</a> | <a href="https://www.youtube.com/watch?v=Z1Es9lCJMzk">Video 2 →</a></p>
+                    </td>
+                </tr>
+
+                <!-- 4) CityWalker-EarthRover Integration -->
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
