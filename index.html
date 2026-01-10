@@ -240,15 +240,12 @@
                         <br>
                         <p></p>
                         <p>
-                            Developing a complete autonomous navigation system for the NASA-style Lunar Autonomy Challenge, where a simulated rover must explore unknown lunar terrain, avoid hazards, and return to its landing site without GPS or prior maps. The system integrates visual SLAM for localization, deep learning-based stereo depth estimation, and perception-aware path planning that explicitly reasons about sensor uncertainty.
+                            Building an autonomous navigation system for the NASA-style Lunar Autonomy Challenge—a simulated rover exploring unknown lunar terrain without GPS or prior maps. The system combines ORB-SLAM3 for visual odometry with FoundationStereo for depth estimation in challenging lunar lighting.
                         </p>
                         <p>
-                            The perception pipeline combines ORB-SLAM3 for real-time visual odometry and mapping with FoundationStereo, a foundation model for stereo matching that provides robust depth estimation in the challenging lighting conditions of the lunar environment. Unlike traditional navigation stacks that treat depth as ground truth, this system propagates uncertainty through the entire pipeline—from stereo matching confidence to voxel grid occupancy to costmap weights—enabling the planner to actively avoid regions where perception is unreliable, such as shadowed craters and texture-poor surfaces.
+                            The key insight: instead of treating depth as ground truth, we propagate uncertainty through the entire pipeline. The planner actively avoids shadowed craters and texture-poor surfaces where perception is unreliable. A* planning with perception-aware costmaps, trajectory smoothing, and pure pursuit control complete the autonomy loop.
                         </p>
-                        <p>
-                            The navigation stack implements a full autonomy loop: stereo depth estimation feeds into a 3D voxel grid, which is projected to a 2D height map and converted into a perception-aware costmap that penalizes obstacles, uncertainty, and shadows. An A* planner generates paths that balance distance-to-goal against perception risk, while a trajectory smoother and pure pursuit controller execute the motion.
-                        </p>
-                        <p><em>Tech: Python, C++, ORB-SLAM3, FoundationStereo, OpenCV, NumPy, ROS2, PyTorch</em></p>
+                        <p><em>Tech: Python, C++, ORB-SLAM3, FoundationStereo, OpenCV, ROS2, PyTorch</em></p>
                         <p><a href="https://github.com/vivekmattam02/LAC_26">GitHub →</a> | <a href="https://www.youtube.com/watch?v=JbqZYXgmWIo">Video 1 →</a> | <a href="https://www.youtube.com/watch?v=Z1Es9lCJMzk">Video 2 →</a></p>
                     </td>
                 </tr>
