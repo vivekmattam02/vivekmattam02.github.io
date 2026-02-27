@@ -33,7 +33,7 @@
                         </p>
                         <p>
                             NYU has been an incredible learning experience. I've had the chance to work on a Bell Labs funded project
-                            building high-speed navigation systems, train quadruped robots with reinforcement learning in Isaac Lab,
+                            distilling foundation models onto edge hardware for autonomous navigation, train quadruped robots with reinforcement learning in Isaac Lab,
                             and work on visual SLAM and perception for the VIP Self-Drive project. Before coming here, I interned at
                             <a href="#">Xmachines</a>, an agricultural robotics startup, where I worked on sensor fusion and motion planning.
                         </p>
@@ -150,11 +150,11 @@
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                 <tbody>
 
-                <!-- 1) High-Speed Autonomous Navigation -->
+                <!-- 1) Vortex - Edge Perception for Autonomous Navigation -->
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
-                            <img src="images/bellabs_nav.png" width="280" alt="High-Speed Navigation">
+                            <img src="images/bellabs_nav.png" width="280" alt="Vortex Autonomous RC Car">
                         </div>
                         <div style="margin-top:10px;">
                             <a href="https://youtu.be/EOe9tmgbaLE" target="_blank">
@@ -163,18 +163,31 @@
                         </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                        <span class="papertitle">High-Speed Autonomous Navigation in Narrow Corridors</span>
+                        <span class="papertitle">Vortex: Real-Time Edge Perception for Autonomous Navigation via Foundation Model Distillation</span>
                         <br>
-                        <em>NYU, Bell Labs Funded (MS Project)</em>, 2024-Present
+                        <em>NYU, Bell Labs Funded (MS Project)</em>, Jan 2025-Present
                         <br>
                         <p></p>
                         <p>
-                            Developed a ROS 2-based navigation framework for an Ackermann-steered RC car operating in corridors as narrow as 1.2 meters. Built a complete simulation environment in Gazebo Ignition with a custom URDF model addressing the four-bar linkage limitation inherent to Ackermann steering.
+                            <strong>The problem.</strong> Foundation models like SAM2 and Depth Anything V2 deliver state-of-the-art perception, but they need server-class GPUs (300W, $15K+). Mobile robots run on edge hardware with hard constraints: 15W power, $250 budget, &lt;10ms latency. The question is how much of that perception quality survives compression to a $250 Jetson, and is it enough to actually improve a robot's obstacle detection?
                         </p>
                         <p>
-                            Implemented camera-LiDAR fusion with optical flow-based motion tracking and ego-motion compensation. Developed a racing line optimization algorithm that utilizes 92% of corridor width through outside-inside-outside cornering. Integrated Nav2, SLAM Toolbox, EKF localization, and MPPI control into a 60+ node architecture. Currently deploying on a real Traxxas RC car.
+                            <strong>What I built.</strong> An autonomous 1/10-scale RC car (Traxxas Maxx 4S) that navigates hospital corridors using a distilled perception model running entirely on a Jetson Orin Nano 8GB. No cloud. No laptop. Everything onboard.
                         </p>
-                        <p><em>Tech: ROS 2 Humble, Gazebo Ignition, Nav2, SLAM Toolbox, OpenCV, Python, C++</em></p>
+                        <p>
+                            <strong>The distillation pipeline.</strong> I ran two large teacher models on an HPC cluster (NYU Torch, L40S GPUs): SAM2-Large (600M params) for semantic segmentation and Depth Anything V2-Large (300M+ params) for monocular depth. Their outputs supervised a single MobileNetV3-Small student (3M params) that predicts both depth and segmentation simultaneously from one RGB frame. The student is 300x smaller than its teachers and runs at ~5ms per frame on the Jetson via TensorRT FP16.
+                        </p>
+                        <p>
+                            <strong>Why not just use a LiDAR?</strong> The car has a 2D LiDAR (RPLiDAR A2M8), and it handles localization via AMCL. But a 2D laser scan is a single horizontal slice -- it can't see chairs (beam passes under), glass doors (laser passes through), or overhanging obstacles (above the scan plane). The student model provides dense 3D depth and per-pixel semantic labels from the camera, catching everything the LiDAR misses.
+                        </p>
+                        <p>
+                            <strong>Depth fusion.</strong> The Orbbec Femto Bolt camera provides hardware Time-of-Flight depth, but ToF has gaps on reflective surfaces, thin edges, and at range limits. The student model's learned depth fills those holes. The fusion node combines both: trust hardware ToF where confident, fall back to the student's prediction elsewhere. The fused depth feeds Nav2's 3D costmap for obstacle avoidance.
+                        </p>
+                        <p>
+                            <strong>The full stack.</strong> I wrote 6 ROS 2 nodes from scratch: VESC FOC motor control with a custom UART protocol decoder (reverse-engineered for firmware 6.06), Teensy 4.1 encoder feedback and steering, TensorRT inference, depth fusion, class-aware costmap generation, and a Twist-to-TwistStamped bridge. The navigation stack uses Nav2 with an MPPI controller, EKF fusing wheel odometry + IMU, and SLAM Toolbox for mapping.
+                        </p>
+                        <p><em>Hardware: Jetson Orin Nano 8GB, RPLiDAR A2M8, Orbbec Femto Bolt (RGB + ToF + 200Hz IMU), VESC MINI v6 MK5, Teensy 4.1, AS5600 encoders x2</em></p>
+                        <p><em>Tech: ROS 2 Humble, Nav2, PyTorch, TensorRT, ONNX, Gazebo, Python, C++, SLURM, Singularity</em></p>
                         <p><a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation">GitHub</a> | <a href="https://youtu.be/EOe9tmgbaLE">Video</a></p>
                     </td>
                 </tr>
@@ -266,10 +279,10 @@
                         <br>
                         <p></p>
                         <p>
-                            Deployed <a href="https://ai4ce.github.io/CityWalker/">CityWalker</a> (CVPR 2025) on a FrodoBots EarthRover for sidewalk navigation. The model was trained entirely on YouTube walking videos and had never seen this robot before, so the whole deployment is a zero-shot transfer problem. Built the full pipeline from camera input to differential drive motor commands: preprocessing, waypoint prediction, coordinate transforms, and trajectory tracking.
+                            Deployed <a href="https://ai4ce.github.io/CityWalker/">CityWalker</a> (CVPR 2025) on a FrodoBots EarthRover for sidewalk navigation. The model was trained on YouTube walking videos and had never seen this robot, so the whole deployment is zero-shot. Built the full pipeline from camera input to differential drive motor commands: preprocessing, waypoint prediction, coordinate transforms, and trajectory tracking.
                         </p>
                         <p>
-                            Also implemented Depth Barrier Regularization (DBR) to improve navigation safety by incorporating depth information as a constraint, preventing the robot from getting too close to obstacles during autonomous traversal.
+                            On top of this, working on Depth Barrier Regularization (DBR), a safety-aware training method that uses monocular depth estimation to penalize waypoint predictions that violate a safety margin. DBR converts depth maps into polar clearance vectors and adds a differentiable barrier loss during training, so the model learns to avoid obstacles without needing explicit collision labels. Offline results on CityWalk show a 15% reduction in depth violations and 23% increase in minimum depth margin while keeping navigation accuracy within 3% of baseline. Targeting CoRL 2026 submission.
                         </p>
                         <p><a href="https://github.com/vivekmattam02/citywalker-earthrover">GitHub</a></p>
                     </td>
