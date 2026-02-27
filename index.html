@@ -266,12 +266,12 @@
                         <br>
                         <p></p>
                         <p>
-                            Deploying <a href="https://ai4ce.github.io/CityWalker/">CityWalker</a> (CVPR 2025), a vision-based navigation model from our lab, onto a FrodoBots EarthRover robot. The model learned urban navigation from YouTube walking videos and was never trained on this robot, making it a zero-shot transfer problem.
+                            Deployed <a href="https://ai4ce.github.io/CityWalker/">CityWalker</a> (CVPR 2025) on a FrodoBots EarthRover for sidewalk navigation. The model was trained entirely on YouTube walking videos and had never seen this robot before, so the whole deployment is a zero-shot transfer problem. Built the full pipeline from camera input to differential drive motor commands: preprocessing, waypoint prediction, coordinate transforms, and trajectory tracking.
                         </p>
                         <p>
-                            The system takes camera feeds, predicts waypoints through the model, and converts them to motor commands. Currently working on the integration layer: coordinate transforms, trajectory tracking, and controller tuning.
+                            Also implemented Depth Barrier Regularization (DBR) to improve navigation safety by incorporating depth information as a constraint, preventing the robot from getting too close to obstacles during autonomous traversal.
                         </p>
-                        <p><em>Status: In Progress</em> | <a href="https://github.com/vivekmattam02/citywalker-earthrover">GitHub</a></p>
+                        <p><a href="https://github.com/vivekmattam02/citywalker-earthrover">GitHub</a></p>
                     </td>
                 </tr>
 
