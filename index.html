@@ -169,13 +169,13 @@
                         <br>
                         <p></p>
                         <p>
-                            Built an autonomous 1/10-scale RC car (Traxxas Maxx 4S) that navigates hospital corridors using a perception model running entirely onboard a Jetson Orin Nano. The core idea: foundation models like SAM2 and Depth Anything V2 are too large for edge hardware, so I distilled them into a 3M-parameter MobileNetV3 student via multi-task knowledge distillation -- 300x smaller, running at ~5ms/frame via TensorRT FP16 within a 15W power budget.
+                            Built a 1/10-scale autonomous robot from scratch: Traxxas Maxx 4S chassis, VESC MINI v6 (FOC, 60A) motor controller, Teensy 4.1 handling dual AS5600 magnetic encoder odometry and servo control over a custom serial protocol, with ELRS RC for teleoperation. Sensors include an RPLiDAR S2 (18m range), Orbbec Femto Bolt (RGB + ToF depth + 200Hz IMU), all running on a Jetson Orin Nano 8GB.
                         </p>
                         <p>
-                            The car already has a 2D LiDAR for localization, but a horizontal laser scan misses chairs, glass doors, and anything above the scan plane. The student model provides dense depth and per-pixel semantic labels from a single RGB frame, catching what the LiDAR can't. It also fuses with hardware ToF from an Orbbec Femto Bolt, using learned depth to fill gaps on reflective surfaces and thin edges.
+                            The perception problem: the ToF camera returns 77% invalid pixels on polished floors and glass, so a 2D LiDAR scan alone leaves huge blind spots. I distilled DA3 and SAM2 teachers into an EfficientViT-B1 student (5.3M params) for joint depth + segmentation, trained on NYU HPC (L40S GPUs). The learned depth fills the ToF gaps, adding 55% more obstacle evidence to the Nav2 costmap, and fusing it into LiDAR SLAM reduced localization error by 73% (4.63m to 1.23m median APE). The model runs at 21.9 FPS on the Jetson via TensorRT FP16.
                         </p>
                         <p>
-                            Built the full ROS 2 stack from scratch: 6 custom nodes covering VESC motor control (reverse-engineered UART protocol for firmware 6.06), encoder odometry, TensorRT inference, depth fusion, and class-aware costmap generation. Navigation uses Nav2 with MPPI, EKF on wheel odometry + IMU, and SLAM Toolbox. Trained the student on NYU HPC (L40S GPUs, SLURM) on the NYUv2 dataset.
+                            The full ROS 2 stack was built from scratch: custom nodes for VESC motor control (reverse-engineered UART protocol for firmware 6.06), encoder odometry, TensorRT inference, depth fusion with affine calibration, and class-aware costmap generation. Navigation uses Nav2 with Regulated Pure Pursuit, AMCL localization, and SLAM Toolbox, with a 7-config costmap ablation study for obstacle layer evaluation.
                         </p>
                         <p><em>Tech: ROS 2 Humble, Nav2, PyTorch, TensorRT, ONNX, Gazebo, Python, C++</em></p>
                         <p><a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation">GitHub</a> | <a href="https://youtu.be/EOe9tmgbaLE">Video</a></p>
