@@ -70,12 +70,20 @@
 %----------PROJECTS----------
 \section{Projects}
 
-\href{https://github.com/vivekmattam02/ros2-ackermann-racing-navigation}{\textcolor{blue}{\textbf{Vortex: Autonomous RC Car with Edge-Deployed Distilled Perception}}} $|$ \textit{Bell Labs Funded, MS Project} \hfill Jan 2025 - Present
+\href{https://github.com/vivekmattam02/ros2-ackermann-racing-navigation}{\textcolor{blue}{\textbf{Bootstrapping Robot Perception Under Hardware Depth Failure}}} $|$ \textit{Bell Labs Funded, MS Project} \hfill Jan 2025 - Present \\
+\textit{Advisor: \href{https://wp.nyu.edu/aarab/}{Dr. Aliasghar Arab} $|$ IEEE CASE 2026}
 \begin{itemize}
-    \item Compressed a 900M-parameter foundation model ensemble (SAM2-Large + Depth Anything V2-Large) into a 3M-parameter MobileNetV3 student via multi-task knowledge distillation, achieving 300x parameter reduction while retaining real-time depth and segmentation.
-    \item Deployed multi-task perception on Jetson Orin Nano at \textasciitilde5ms/frame (200 FPS) using TensorRT FP16 within a 15W power envelope, detecting obstacles a 2D LiDAR cannot see (glass doors, overhanging objects, chairs).
-    \item Designed multi-sensor fusion pipeline integrating RPLiDAR A2M8, Orbbec Femto Bolt (ToF depth + 200Hz IMU + RGB), and dual magnetic encoders with EKF localization, fusing learned monocular depth with hardware ToF to fill coverage gaps.
-    \item Architected full autonomy stack in ROS 2 Humble: 6 custom nodes (VESC motor control, encoder odometry, TensorRT inference, depth fusion, class-aware costmap, stamper bridge), Nav2 with MPPI controller, SLAM Toolbox, and Gazebo simulation.
+    \item Designed a failover perception system for an indoor mobile robot: when ToF depth degrades on reflective surfaces, the stack escalates to learned monocular depth and semantics, recovering 55\% more obstacle evidence in the Nav2 costmap.
+    \item Distilled Depth Anything V3 + SAM2 into a 5.3M-param edge model for joint depth + segmentation; runs at 21.9 FPS on Jetson Orin Nano via TensorRT FP16 alongside the full ROS 2 autonomy stack.
+    \item Depth fusion with LiDAR cut localization error 73\% on a public benchmark; validated across 7 sensor configurations in two physically distinct environments.
+\end{itemize}
+\vspace{1pt}
+
+\textbf{VIP Self-Drive — Team Lead} $|$ \textit{NYU Vertically Integrated Projects} \hfill 2024 - Present
+\begin{itemize}
+    \item Leading NYU's hosting of Earth Rover Challenge 3; integrating vision-based navigation models (MBRA, CityWalker) with FrodoBots EarthRover for outdoor deployment and evaluation.
+    \item Developed Depth Barrier Regularization (DBR) under \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng} for safety-aware waypoint prediction; 15\% reduction in depth violations, 23\% increase in min depth margin (targeting CoRL 2026).
+    \item Built camera-only TurtleBot3 navigation using ORB visual SLAM, CosPlace + SuperGlue (79\% inlier ratio), RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
 \end{itemize}
 \vspace{1pt}
 
@@ -91,14 +99,6 @@
     \item Built autonomous navigation for simulated lunar rover without GPS or prior maps, combining ORB-SLAM3 for visual odometry with FoundationStereo for depth estimation.
     \item Developed perception-aware costmap that propagates depth uncertainty through the pipeline; planner actively avoids shadowed craters and texture-poor surfaces where perception is unreliable.
     \item Implemented A* planning with uncertainty-weighted costs and pure pursuit control for the full autonomy loop.
-\end{itemize}
-\vspace{1pt}
-
-\textbf{Visual Navigation \& Perception} $|$ \textit{\href{https://ai4ce.github.io/CityWalker/}{AI4CE Lab} / VIP Self-Drive, NYU} \hfill 2024 - Present
-\begin{itemize}
-    \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} (CVPR 2025) on FrodoBots EarthRover under \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng}; developed Depth Barrier Regularization (DBR) for safety-aware training using monocular depth, 15\% reduction in depth violations (targeting CoRL 2026).
-    \item Built camera-only TurtleBot3 navigation using ORB visual SLAM with A* planning; maze solving with CosPlace + SuperGlue achieving 79\% inlier ratio on pose verification.
-    \item Perception pipeline from scratch: RANSAC plane fitting (66\% inliers on 113K points), ICP alignment, YOLOv11+ByteTrack tracking across 12,700+ images.
 \end{itemize}
 \vspace{1pt}
 
