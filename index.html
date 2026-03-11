@@ -272,7 +272,7 @@
                             Deployed <a href="https://ai4ce.github.io/CityWalker/">CityWalker</a> (CVPR 2025) on a FrodoBots EarthRover for sidewalk navigation. The model was trained on YouTube walking videos and had never seen this robot, so the whole deployment is zero-shot. Built the full pipeline from camera input to differential drive motor commands: preprocessing, waypoint prediction, coordinate transforms, and trajectory tracking.
                         </p>
                         <p>
-                            On top of this, working on Depth Barrier Regularization (DBR), a safety-aware training method that uses monocular depth estimation to penalize waypoint predictions that violate a safety margin. DBR converts depth maps into polar clearance vectors and adds a differentiable barrier loss during training, so the model learns to avoid obstacles without needing explicit collision labels. Offline results on CityWalk show a 15% reduction in depth violations and 23% increase in minimum depth margin while keeping navigation accuracy within 3% of baseline. Targeting CoRL 2026 submission.
+                            Also extended CityWalker with Depth Barrier Regularization (DBR) -- penalizes waypoints directed toward obstacles within a 0.5m safety margin using Depth-Anything-V2 at training time, depth-free at inference. Offline results on CityWalk show a 15% reduction in depth violations and 23% increase in minimum depth margin while keeping navigation accuracy within 3% of baseline.
                         </p>
                         <p><a href="https://github.com/vivekmattam02/citywalker-earthrover">GitHub</a></p>
                     </td>
@@ -286,16 +286,16 @@
                         </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                        <span class="papertitle">VIP Self-Drive — Team Lead</span>
+                        <span class="papertitle">VIP Self-Drive — Student Leader</span>
                         <br>
-                        <em>NYU Vertically Integrated Projects</em>, 2024-Present
+                        <em>NYU Vertically Integrated Projects, <a href="https://ai4ce.github.io/">AI4CE Lab</a>, Faculty: <a href="https://scholar.google.com/citations?user=YeG8ZM0AAAAJ&hl=en">Prof. Chen Feng</a></em>, Sep 2024-Present
                         <br>
                         <p></p>
                         <p>
                             Currently leading the VIP Self-Drive team. Integrating vision-based navigation models (MBRA, CityWalker) with FrodoBots EarthRover for deployment and evaluation. Also leading NYU's hosting of Earth Rover Challenge 3, including implementation of the NYU tracks.
                         </p>
                         <p>
-                            Previously built camera-only TurtleBot3 navigation using ORB visual SLAM with A* planning, maze navigation with CosPlace + SuperGlue (79% inlier ratio), and a perception pipeline from scratch covering RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
+                            Previously built camera-only TurtleBot3 navigation using ORB visual SLAM and CosPlace + SuperGlue (79% inlier ratio); perception work includes RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
                         </p>
                         <p><em>Tech: ROS 2 Humble, PyTorch, CosPlace, SuperGlue, OpenCV, YOLOv11, ByteTrack, ORB SLAM, TurtleBot3, FrodoBots EarthRover</em></p>
                     </td>
