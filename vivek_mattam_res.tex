@@ -54,7 +54,7 @@
 %----------EXPERIENCE----------
 \section{Experience}
 
-\href{https://wp.nyu.edu/aarab/}{\textbf{Course Assistant - Autonomous Mobile Robots}} $|$ \textit{NYU Tandon, \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab}} \hfill Sep 2024 -- Present
+\href{https://wp.nyu.edu/aarab/}{\textbf{Course Assistant - Autonomous Mobile Robots}} $|$ \textit{NYU Tandon, \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab}} \hfill Sep 2024 -- May 2025
 \begin{itemize}
     \item Built all lecture notes, assignments, and \href{https://vivekmattam02.github.io/amr-notes/}{course website} for a graduate robotics course offered for the first time; topics span vehicle kinematics, nonlinear control, Lyapunov stability, MPC, and motion planning.
 \end{itemize}
@@ -66,6 +66,14 @@
     \item Built Flask server for real-time sensor streaming integrating MPU-6050 IMU and Arducam IMX219 camera feeds for robot state monitoring during field tests.
     \item Developed prototype object detection tunnel for weeder robot; automated size classification and routing for sorting process.
 \end{itemize}
+\vspace{1pt}
+
+\href{https://engineering.nyu.edu/research/student-research/vertically-integrated-projects/vip-teams/nyu-self-drive}{\textbf{VIP Self-Drive — Student Leader}} $|$ \textit{NYU Vertically Integrated Projects, Faculty: \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng}, \href{https://ai4ce.github.io/}{AI4CE Lab}} \hfill Sep 2024 -- Present
+\begin{itemize}
+    \item Leading NYU's hosting of Earth Rover Challenge 3 and implementation of NYU tracks; integrating vision-based navigation models (MBRA, CityWalker) with FrodoBots EarthRover for deployment and evaluation.
+    \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} (CVPR 2025) on FrodoBots EarthRover; currently extending it with depth barrier regularization -- penalizes waypoints within a 0.5m safety margin using Depth-Anything-V2 at training time, depth-free at inference.
+    \item Built camera-only TurtleBot3 navigation using ORB visual SLAM and CosPlace + SuperGlue (79\% inlier ratio); perception work includes RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
+\end{itemize}
 
 %----------PROJECTS----------
 \section{Projects}
@@ -76,15 +84,6 @@
     \item Designed a failover perception system for an indoor mobile robot: when ToF depth degrades on reflective surfaces, the stack escalates to learned monocular depth and semantics, recovering 55\% more obstacle evidence in the Nav2 costmap.
     \item Distilled Depth Anything V3 + SAM2 into a 5.3M-param edge model for joint depth + segmentation; runs at 21.9 FPS on Jetson Orin Nano via TensorRT FP16 alongside the full ROS 2 autonomy stack.
     \item Depth fusion with LiDAR cut localization error 73\% on a public benchmark; validated across 7 sensor configurations in two physically distinct environments.
-\end{itemize}
-\vspace{1pt}
-
-\href{https://engineering.nyu.edu/research/student-research/vertically-integrated-projects/vip-teams/nyu-self-drive}{\textbf{VIP Self-Drive — Student Leader}} $|$ \textit{NYU Vertically Integrated Projects} \hfill Sep 2024 -- Present \\
-\textit{Faculty: \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng} $|$ \href{https://ai4ce.github.io/}{AI4CE Lab}}
-\begin{itemize}
-    \item Leading NYU's hosting of Earth Rover Challenge 3 and implementation of NYU tracks; integrating vision-based navigation models (MBRA, CityWalker) with FrodoBots EarthRover for deployment and evaluation.
-    \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} (CVPR 2025) on FrodoBots EarthRover; currently extending it with depth barrier regularization -- penalizes waypoints within a 0.5m safety margin using Depth-Anything-V2 at training time, depth-free at inference.
-    \item Built camera-only TurtleBot3 navigation using ORB visual SLAM and CosPlace + SuperGlue (79\% inlier ratio); perception work includes RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
 \end{itemize}
 \vspace{1pt}
 
@@ -103,7 +102,7 @@
 \end{itemize}
 \vspace{1pt}
 
-\href{https://github.com/Nishant-ZFYII/rob6323_go2_project}{\textcolor{blue}{\textbf{Reinforcement Learning for Quadruped Locomotion}}} $|$ \textit{NVIDIA Isaac Lab} \hfill Sep 2024 -- Dec 2024
+\href{https://github.com/Nishant-ZFYII/rob6323_go2_project}{\textcolor{blue}{\textbf{Reinforcement Learning for Quadruped Locomotion}}} $|$ \textit{NVIDIA Isaac Lab} \hfill Sep 2025 -- Dec 2025
 \begin{itemize}
     \item Trained Unitree Go2 with PPO implementing reward shaping, Raibert heuristic gait coordination, and actuator friction modeling with domain randomization.
     \item Achieved 2x baseline velocity tracking on flat and rough terrain for sim-to-real transfer.
