@@ -154,12 +154,13 @@
                 <tr>
                     <td style="padding:20px;width:25%;vertical-align:middle">
                         <div class="one">
-                            <img src="images/bellabs_nav.png" width="280" alt="Vortex Autonomous RC Car">
+                            <img src="images/rccar.jpg" width="280" alt="Vortex RC Car">
                         </div>
                         <div style="margin-top:10px;">
-                            <a href="https://youtu.be/EOe9tmgbaLE" target="_blank">
-                                <img src="https://img.youtube.com/vi/EOe9tmgbaLE/0.jpg" width="280" alt="Demo Video" style="border-radius:5px;">
-                            </a>
+                            <img src="images/lilocbench_costmap_comparison.png" width="280" alt="LILocBench Costmap Comparison" style="border-radius:5px;">
+                        </div>
+                        <div style="margin-top:10px;">
+                            <img src="images/fusion_frame_00285.png" width="280" alt="Depth Fusion Frame" style="border-radius:5px;">
                         </div>
                     </td>
                     <td style="padding:20px;width:75%;vertical-align:middle">
@@ -169,13 +170,16 @@
                         <br>
                         <p></p>
                         <p>
-                            Built a 1/10-scale autonomous robot from scratch: Traxxas Maxx 4S chassis, VESC MINI v6 (FOC, 60A) motor controller, Teensy 4.1 handling dual AS5600 magnetic encoder odometry and servo control over a custom serial protocol, with ELRS RC for teleoperation. Sensors include an RPLiDAR S2 (18m range), Orbbec Femto Bolt (RGB + ToF depth + 200Hz IMU), all running on a Jetson Orin Nano 8GB.
+                            Built a 1/10-scale autonomous robot from scratch: Traxxas Maxx 4S chassis, VESC MINI v6 (FOC, 60A) motor controller, Teensy 4.1 handling dual AS5600 magnetic encoder odometry and servo control over a custom serial protocol, with ELRS RC for teleoperation. Sensors include an RPLiDAR S2 (18m range) and Orbbec Femto Bolt (RGB + ToF depth + 200Hz IMU), all running on a Jetson Orin Nano 8GB.
                         </p>
                         <p>
-                            The perception problem: the ToF camera returns 77% invalid pixels on polished floors and glass, so a 2D LiDAR scan alone leaves huge blind spots. I distilled DA3 and SAM2 teachers into an EfficientViT-B1 student (5.3M params) for joint depth + segmentation, trained on NYU HPC (L40S GPUs). The learned depth fills the ToF gaps, adding 55% more obstacle evidence to the Nav2 costmap, and fusing it into LiDAR SLAM reduced localization error by 73% (4.63m to 1.23m median APE). The model runs at 21.9 FPS on the Jetson via TensorRT FP16.
+                            The perception problem: the ToF camera returns 77% invalid pixels on polished floors and glass, leaving the Nav2 costmap blind to obstacles the 2D LiDAR scan plane misses entirely. I built a selective depth-failure recovery system that detects invalid pixels and substitutes learned monocular depth only where the sensor fails, keeping LiDAR as the primary SLAM anchor. The learned depth adds 55% more obstacle evidence in a live reflective corridor and 170% more occupied costmap cells on the LILocBench dynamic benchmark. In closed-loop Gazebo simulation, a corridor-specialized student achieves 9/10 navigation success with zero collisions, matching the ground-truth depth baseline.
                         </p>
                         <p>
-                            The full ROS 2 stack was built from scratch: custom nodes for VESC motor control (reverse-engineered UART protocol for firmware 6.06), encoder odometry, TensorRT inference, depth fusion with affine calibration, and class-aware costmap generation. Navigation uses Nav2 with Regulated Pure Pursuit, AMCL localization, and SLAM Toolbox, with a 7-config costmap ablation study for obstacle layer evaluation.
+                            The model is an EfficientViT-B1 student (5.31M params) distilled from Depth Anything v3 + SAM2 teachers for joint depth + segmentation, trained on NYU HPC (L40S GPUs). Depth scale is recovered per-frame via median alignment against valid ToF pixels. The model runs at 21.9 FPS on the Jetson via TensorRT FP16.
+                        </p>
+                        <p>
+                            The full ROS 2 stack was built from scratch: custom nodes for VESC motor control (reverse-engineered UART protocol for firmware 6.06), encoder odometry, TensorRT inference, depth fusion, and class-aware costmap generation. Navigation uses Nav2 with MPPI controller, AMCL localization, and SLAM Toolbox, with a 7-config costmap ablation study across two evaluation environments.
                         </p>
                         <p><em>Tech: ROS 2 Humble, Nav2, PyTorch, TensorRT, ONNX, Gazebo, Python, C++</em></p>
                         <p><a href="https://github.com/vivekmattam02/ros2-ackermann-racing-navigation">GitHub</a> | <a href="https://youtu.be/EOe9tmgbaLE">Video</a></p>
@@ -265,7 +269,7 @@
                     <td style="padding:20px;width:75%;vertical-align:middle">
                         <span class="papertitle">CityWalker-EarthRover Integration</span>
                         <br>
-                        <em>NYU, Advisor: <a href="https://scholar.google.com/citations?user=YeG8ZM0AAAAJ&hl=en">Prof. Chen Feng</a></em>, 2024-Present
+                        <em>NYU, <a href="https://ai4ce.github.io/">AI4CE Lab</a></em>, 2024-Present
                         <br>
                         <p></p>
                         <p>
