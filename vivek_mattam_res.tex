@@ -51,7 +51,7 @@
 %----------EXPERIENCE----------
 \section{Experience}
 
-\href{https://wp.nyu.edu/aarab/}{\textbf{Course Assistant - Autonomous Mobile Robots}} $|$ \textit{NYU Tandon, \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab}} \hfill Sep 2024 -- May 2025
+\href{https://wp.nyu.edu/aarab/}{\textbf{Course Assistant - Autonomous Mobile Robots}} $|$ \textit{NYU Tandon, \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab}} \hfill Sep 2025 -- Jan 2026
 \begin{itemize}
     \item Built all lecture notes, assignments, and \href{https://vivekmattam02.github.io/amr-notes/}{course website} for a graduate robotics course offered for the first time; topics span vehicle kinematics, nonlinear control, Lyapunov stability, MPC, and motion planning.
 \end{itemize}
@@ -64,7 +64,6 @@
     \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} (CVPR 2025) on FrodoBots EarthRover; currently extending it with depth barrier regularization -- penalizes waypoints within a 0.5m safety margin using Depth-Anything-V2 at training time, depth-free at inference.
     \item Built camera-only TurtleBot3 navigation using ORB visual SLAM and CosPlace + SuperGlue (79\% inlier ratio); perception work includes RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
 \end{itemize}
-\vspace{1pt}
 
 \href{https://www.xmachines.ai/}{\textbf{Robotics Engineering Intern}} \hfill Feb 2024 -- Aug 2024 \\
 \textit{Xmachines - Agricultural Robotics Startup}
@@ -72,6 +71,7 @@
     \item Built Flask server for real-time sensor streaming integrating MPU-6050 IMU and Arducam IMX219 camera feeds for robot state monitoring during field tests.
     \item Developed prototype object detection tunnel for weeder robot; automated size classification and routing for sorting process.
 \end{itemize}
+\vspace{1pt}
 
 %----------PROJECTS----------
 \section{Projects}
@@ -79,9 +79,9 @@
 \href{https://github.com/vivekmattam02/ros2-ackermann-racing-navigation}{\textcolor{blue}{\textbf{Bootstrapping Robot Perception Under Hardware Depth Failure}}} $|$ \textit{Bell Labs Funded, MS Project} \hfill Jan 2025 -- Present \\
 \textit{Advisor: \href{https://wp.nyu.edu/aarab/}{Dr. Aliasghar Arab} $|$ IEEE CASE 2026}
 \begin{itemize}
-    \item Designed a failover perception system for an indoor mobile robot: when ToF depth degrades on reflective surfaces, the stack escalates to learned monocular depth and semantics, recovering 55\% more obstacle evidence in the Nav2 costmap.
-    \item Distilled Depth Anything V3 + SAM2 into a 5.3M-param edge model for joint depth + segmentation; runs at 21.9 FPS on Jetson Orin Nano via TensorRT FP16 alongside the full ROS 2 autonomy stack.
-    \item Depth fusion with LiDAR cut localization error 73\% on a public benchmark; validated across 7 sensor configurations in two physically distinct environments.
+    \item Designed depth-failure recovery system for indoor robot navigation: detects per-pixel ToF invalidity on reflective surfaces and selectively substitutes learned monocular depth (Depth Anything v3), keeping 2D LiDAR as the primary SLAM anchor; increases occupied costmap cells by 55\% in a reflective corridor and 170\% on the LILocBench dynamic benchmark.
+    \item Validated across three evaluation regimes including closed-loop Gazebo simulation, where a corridor-specialized student achieves 9/10 navigation success with zero collisions, matching the ground-truth depth baseline; full stack runs within 8\,GB on a Jetson Orin Nano under ROS~2/Nav2.
+    \item Distilled Depth Anything V3 + SAM2 into a 5.31M-parameter edge model for joint depth estimation and semantic segmentation; deployed via TensorRT FP16 at 21.9\,FPS on Jetson Orin Nano alongside the full autonomy stack.
 \end{itemize}
 \vspace{1pt}
 
@@ -113,7 +113,7 @@
     \item \textbf{Languages:} Python, C++, C, MATLAB
     \item \textbf{Autonomous Navigation:} ROS/ROS 2, Nav2, SLAM Toolbox, ORB-SLAM3, Visual Odometry, EKF, MPC, MPPI, A*, Pure Pursuit
     \item \textbf{Perception \& ML:} PyTorch, OpenCV, CosPlace, SuperGlue, YOLOv8/v11, ByteTrack, RANSAC, ICP, Open3D
-    \item \textbf{Hardware \& Simulation:} Gazebo, Isaac Lab, Jetson Orin Nano, Arduino, TurtleBot3, Boston Dynamics Spot, Docker, Git, Linux
+    \item \textbf{Hardware \& Simulation:} Gazebo, Isaac Lab, Jetson Orin Nano, Arduino, TurtleBot3, Docker, Git, Boston Dynamics SDK
 \end{itemize}
 
 \end{document}
