@@ -1,0 +1,123 @@
+% Resume - Vivekananda Swamy Mattam
+% Technical founder / professor version
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.4in, top=0.25in, bottom=0.25in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Link colors - blue
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Formatting
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section formatting - bold uppercase with line
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\vspace{-4pt}\rule{\textwidth}{0.4pt}]
+\titlespacing{\section}{0pt}{5pt}{2pt}
+
+% Tight lists
+\setlist[itemize]{leftmargin=0.15in, itemsep=0pt, parsep=0pt, topsep=1pt}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Large \textbf{VIVEKANANDA SWAMY MATTAM}} \\
+    \vspace{4pt}
+    \small
+    Robotics engineer focused on robust mobile autonomy, perception under sensor failure, and edge deployment for real robots. \\
+    \vspace{3pt}
+    +1 (949) 400-7126 \quad $\bullet$ \quad New York, NY \\
+    \href{mailto:vm2677@nyu.edu}{vm2677@nyu.edu} \quad $\bullet$ \quad
+    \href{https://linkedin.com/in/vivek-mattam-a8590b23a}{linkedin} \quad $\bullet$ \quad
+    \href{https://github.com/vivekmattam02}{github} \quad $\bullet$ \quad
+    \href{https://vivekmattam02.github.io}{portfolio}
+\end{center}
+\vspace{-4pt}
+
+%----------EDUCATION----------
+\section{Education}
+
+\textbf{Master of Science in Mechatronics and Robotics Engineering} \hfill Sep 2024 -- May 2026 \\
+\textit{New York University Tandon School of Engineering} \\
+\textbf{Bachelor of Technology in Mechanical Engineering} \hfill Sep 2019 -- May 2023 \\
+\textit{VNR VJIET, Hyderabad, India}
+\vspace{-2pt}
+
+%----------PROJECTS----------
+\section{Selected Projects}
+
+\href{https://github.com/vivekmattam02/ros2-ackermann-racing-navigation}{\textbf{Vortex: Robust Navigation with Edge-Deployed Perception}} $|$ \textit{Bell Labs Funded MS Project} \hfill Jan 2025 -- Present \\
+\textit{Advisor: \href{https://wp.nyu.edu/aarab/}{Dr. Aliasghar Arab}}
+\begin{itemize}
+    \item Built a 1/10-scale autonomous Ackermann robot with Jetson Orin Nano, LiDAR, RGB-ToF sensing, VESC control, Teensy-based odometry, and custom ROS 2 nodes for motor control, TensorRT inference, and class-aware navigation.
+    \item Distilled Depth Anything V3 and SAM2 into a 5.3M-parameter edge model for joint depth and segmentation, recovering 55\% more obstacle evidence when ToF depth degraded on reflective surfaces.
+    \item Fused learned depth with LiDAR SLAM to cut median localization error by 73\% (4.63m to 1.23m APE) and ran the perception stack at 21.9 FPS on Jetson Orin Nano with TensorRT FP16.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/vivekmattam02/citywalker-earthrover}{\textbf{CityWalker-EarthRover Deployment}} $|$ \textit{VIP Self-Drive, AI4CE Lab} \hfill Sep 2024 -- Present \\
+\textit{Faculty: \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng}}
+\begin{itemize}
+    \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} zero-shot on FrodoBots EarthRover for sidewalk navigation, building the camera-to-control pipeline for preprocessing, waypoint prediction, coordinate transforms, and differential-drive tracking.
+    \item Added depth barrier regularization with Depth-Anything-V2 at training time, reducing depth violations by 15\% and increasing minimum depth margin by 23\% while keeping navigation accuracy within 3\% of baseline.
+    \item Led deployment and evaluation work within NYU's VIP Self-Drive team, including Earth Rover Challenge 3 preparation and field testing.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/vivekmattam02/spot}{\textbf{Autonomous Person Following on Boston Dynamics Spot}} \hfill Jan 2025 -- Present
+\begin{itemize}
+    \item Built a real-time visual-servoing system that uses YOLOv8 detections to estimate lateral, distance, and pitch errors and generate smooth 10 Hz velocity commands for person following.
+    \item Integrated Spot SDK, ZED SDK, OpenCV, CUDA, and Docker into an on-robot perception-and-control stack, including body-pitch compensation for tracking on stairs and slopes.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/vivekmattam02/LAC_26}{\textbf{Lunar Autonomy Challenge -- Perception-Aware Navigation}} \hfill Summer 2025
+\begin{itemize}
+    \item Built an autonomous stack for a simulated lunar rover without GPS or prior maps, combining ORB-SLAM3 pose estimation, stereo depth, voxel and height mapping, A* planning, and pure-pursuit plus PID control.
+    \item Propagated stereo uncertainty through mapping and planning so the rover actively avoided shadows, crater rims, and texture-poor terrain instead of treating depth as ground truth.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/Nishant-ZFYII/rob6323_go2_project}{\textbf{Reinforcement Learning for Quadruped Locomotion}} $|$ \textit{NVIDIA Isaac Lab} \hfill Sep 2024 -- Dec 2024
+\begin{itemize}
+    \item Trained a Unitree Go2 locomotion policy with PPO using reward shaping, Raibert heuristic gait coordination, and actuator-friction domain randomization for improved sim-to-real robustness.
+    \item Achieved nearly 2x baseline velocity-tracking performance on flat and rough terrain.
+\end{itemize}
+
+%----------EXPERIENCE----------
+\section{Experience}
+
+\href{https://wp.nyu.edu/aarab/}{\textbf{Course Assistant -- Autonomous Mobile Robots}} $|$ \textit{NYU Tandon, Prof. Aliasghar Arab} \hfill Sep 2024 -- Present
+\begin{itemize}
+    \item Developed lecture notes, assignments, diagrams, and the \href{https://vivekmattam02.github.io/amr-notes/}{course website} for a graduate robotics course; the material now serves as reusable infrastructure for instruction in controls and motion planning.
+\end{itemize}
+\vspace{1pt}
+
+\textbf{Robotics Engineering Intern} $|$ \textit{Xmachines -- Agricultural Robotics Startup} \hfill Feb 2024 -- Aug 2024
+\begin{itemize}
+    \item Built a Flask-based telemetry interface that streamed IMU and camera data for debugging robot state during field tests.
+    \item Developed a computer-vision sorting tunnel for a weeder robot and supported ROS-based motion planning plus embedded integration on Jetson Orin Nano, Arduino, and ESP32.
+\end{itemize}
+
+%----------SKILLS----------
+\section{Skills}
+
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt]
+    \item \textbf{Languages:} Python, C++, C, MATLAB
+    \item \textbf{Robotics:} ROS, ROS 2, Nav2, SLAM Toolbox, ORB-SLAM3, Visual Odometry, EKF, MPC, MPPI, A*, Pure Pursuit
+    \item \textbf{Perception \& ML:} PyTorch, TensorRT, ONNX, OpenCV, YOLOv8/v11, ByteTrack, CosPlace, SuperGlue, RANSAC, ICP, Open3D
+    \item \textbf{Systems:} Jetson Orin Nano, Boston Dynamics Spot, TurtleBot3, Gazebo, Isaac Lab, Docker, Git, Linux, Arduino, ESP32
+\end{itemize}
+
+\end{document}

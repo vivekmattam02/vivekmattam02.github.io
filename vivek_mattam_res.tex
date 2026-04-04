@@ -60,7 +60,7 @@
 \href{https://engineering.nyu.edu/research/student-research/vertically-integrated-projects/vip-teams/nyu-self-drive}{\textbf{VIP Self-Drive — Student Leader}} $|$ \textit{NYU Vertically Integrated Projects} \hfill Sep 2024 -- Present \\
 \textit{Faculty: \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng} $|$ \href{https://ai4ce.github.io/}{AI4CE Lab}}
 \begin{itemize}
-    \item Leading NYU's hosting of Earth Rover Challenge 3 and implementation of NYU tracks; integrating vision-based navigation models (MBRA, CityWalker) with FrodoBots EarthRover for deployment and evaluation.
+    \item Designed an indoor visual navigation system for the EarthRover Challenge: topological mapping, place-recognition localization, geometric verification, and checkpoint-conditioned planning; evaluated MBRA-style control and IMU-supported state estimation under real-world constraints (low frame rate, latency, perceptual aliasing, pedestrian interference).
     \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} (CVPR 2025) on FrodoBots EarthRover; currently extending it with depth barrier regularization -- penalizes waypoints within a 0.5m safety margin using Depth-Anything-V2 at training time, depth-free at inference.
     \item Built camera-only TurtleBot3 navigation using ORB visual SLAM and CosPlace + SuperGlue (79\% inlier ratio); perception work includes RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
 \end{itemize}
@@ -77,11 +77,11 @@
 \section{Projects}
 
 \href{https://github.com/vivekmattam02/ros2-ackermann-racing-navigation}{\textcolor{blue}{\textbf{Bootstrapping Robot Perception Under Hardware Depth Failure}}} $|$ \textit{Bell Labs Funded, MS Project} \hfill Jan 2025 -- Present \\
-\textit{Advisor: \href{https://wp.nyu.edu/aarab/}{Dr. Aliasghar Arab} $|$ IEEE CASE 2026}
+\textit{Advisor: \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab} $|$ \href{https://wp.nyu.edu/asas_labs/about-project/}{ASAS Lab} $|$ Submitted to IEEE CASE 2026}
 \begin{itemize}
-    \item Designed depth-failure recovery system for indoor robot navigation: detects per-pixel ToF invalidity on reflective surfaces and selectively substitutes learned monocular depth (Depth Anything v3), keeping 2D LiDAR as the primary SLAM anchor; increases occupied costmap cells by 55\% in a reflective corridor and 170\% on the LILocBench dynamic benchmark.
-    \item Validated across three evaluation regimes including closed-loop Gazebo simulation, where a corridor-specialized student achieves 9/10 navigation success with zero collisions, matching the ground-truth depth baseline; full stack runs within 8\,GB on a Jetson Orin Nano under ROS~2/Nav2.
-    \item Distilled Depth Anything V3 + SAM2 into a 5.31M-parameter edge model for joint depth estimation and semantic segmentation; deployed via TensorRT FP16 at 21.9\,FPS on Jetson Orin Nano alongside the full autonomy stack.
+    \item Designed a failure-aware depth fusion system: surviving ToF pixels self-calibrate learned monocular depth at runtime with no offline data; keeps 2D LiDAR as SLAM anchor and substitutes learned depth only in per-pixel-invalid regions; achieves +55\% costmap obstacle coverage in a live corridor and +110\% on LILocBench.
+    \item Distilled Depth Anything V3 + SAM2 into a 5.31M-parameter TensorRT student at 218\,FPS / 2.7\,GB on Jetson Orin Nano; corridor-specialized variant achieves 9/10 navigation success with zero collisions in closed-loop Gazebo simulation.
+    \item Built the full robot platform from scratch: Traxxas Maxx 4S, VESC MINI v6 motor controller, Teensy 4.1 encoder odometry, RPLiDAR S2, Orbbec Femto Bolt (RGB + ToF + IMU), on a Jetson Orin Nano 8\,GB running ROS~2/Nav2.
 \end{itemize}
 \vspace{1pt}
 
