@@ -1,0 +1,119 @@
+% Resume - Vivekananda Swamy Mattam
+% Optimized for Autonomous Mobile Robots roles
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.4in, top=0.25in, bottom=0.25in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+% Link colors - blue
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+% Formatting
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Section formatting - bold uppercase with line
+\titleformat{\section}{\normalsize\bfseries\uppercase}{}{0em}{}[\vspace{-4pt}\rule{\textwidth}{0.4pt}]
+\titlespacing{\section}{0pt}{5pt}{2pt}
+
+% Tight lists
+\setlist[itemize]{leftmargin=0.15in, itemsep=0pt, parsep=0pt, topsep=1pt}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Large \textbf{VIVEKANANDA SWAMY MATTAM}} \\
+    \vspace{4pt}
+    \small
+    +1 (949) 400-7126 $\bullet$ New York, USA $\bullet$ \href{mailto:vm2677@nyu.edu}{vm2677@nyu.edu} $\bullet$ \href{https://linkedin.com/in/vivek-mattam-a8590b23a}{linkedin} $\bullet$ \href{https://vivekmattam02.github.io}{vivekmattam02.github.io}
+\end{center}
+\vspace{-4pt}
+
+%----------EDUCATION----------
+\section{Education}
+
+\textbf{Masters of Science - Mechatronics and Robotics Engineering} \hfill Sep 2024 - May 2026 \\
+\textit{New York University - Tandon School of Engineering} \\[2pt]
+\textbf{B.Tech. Mechanical Engineering} \hfill Sep 2019 - May 2023 \\
+\textit{VNR VJIET, Hyderabad, India}
+\vspace{-2pt}
+
+%----------EXPERIENCE----------
+\section{Experience}
+
+\href{https://wp.nyu.edu/aarab/}{\textbf{Course Assistant - Autonomous Mobile Robots}} $|$ \textit{NYU Tandon, \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab}} \hfill Sep 2025 -- Jan 2026
+\begin{itemize}
+    \item Built all lecture notes, assignments, and \href{https://vivekmattam02.github.io/amr-notes/}{course website} for a graduate robotics course offered for the first time; topics span vehicle kinematics, nonlinear control, Lyapunov stability, MPC, and motion planning.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://engineering.nyu.edu/research/student-research/vertically-integrated-projects/vip-teams/nyu-self-drive}{\textbf{VIP Self-Drive — Student Leader}} $|$ \textit{NYU Vertically Integrated Projects} \hfill Sep 2024 -- Present \\
+\textit{Faculty: \href{https://scholar.google.com/citations?user=YeG8ZM0AAAAJ}{Prof. Chen Feng} $|$ \href{https://ai4ce.github.io/}{AI4CE Lab}}
+\begin{itemize}
+    \item Designed an indoor visual navigation system for the EarthRover Challenge: topological mapping, place-recognition localization, geometric verification, and checkpoint-conditioned planning; evaluated MBRA-style control and IMU-supported state estimation under real-world constraints (low frame rate, latency, perceptual aliasing, pedestrian interference).
+    \item Deployed \href{https://ai4ce.github.io/CityWalker/}{CityWalker} (CVPR 2025) on FrodoBots EarthRover; currently extending it with depth barrier regularization -- penalizes waypoints within a 0.5m safety margin using Depth-Anything-V2 at training time, depth-free at inference.
+    \item Built camera-only TurtleBot3 navigation using ORB visual SLAM and CosPlace + SuperGlue (79\% inlier ratio); perception work includes RANSAC plane fitting, ICP alignment, and YOLOv11+ByteTrack tracking.
+\end{itemize}
+
+\href{https://www.xmachines.ai/}{\textbf{Robotics Engineering Intern}} \hfill Feb 2024 -- Aug 2024 \\
+\textit{Xmachines - Agricultural Robotics Startup}
+\begin{itemize}
+    \item Built Flask server for real-time sensor streaming integrating MPU-6050 IMU and Arducam IMX219 camera feeds for robot state monitoring during field tests.
+    \item Developed prototype object detection tunnel for weeder robot; automated size classification and routing for sorting process.
+\end{itemize}
+\vspace{1pt}
+
+%----------PROJECTS----------
+\section{Projects}
+
+\href{https://github.com/vivekmattam02/ros2-ackermann-racing-navigation}{\textcolor{blue}{\textbf{Bootstrapping Robot Perception Under Hardware Depth Failure}}} $|$ \textit{Bell Labs Funded, MS Project} \hfill Jan 2025 -- Present \\
+\textit{Advisor: \href{https://wp.nyu.edu/aarab/}{Prof. Aliasghar Arab} $|$ \href{https://wp.nyu.edu/asas_labs/about-project/}{ASAS Lab} $|$ Submitted to IEEE CASE 2026}
+\begin{itemize}
+    \item Designed a failure-aware depth fusion system: surviving ToF pixels self-calibrate learned monocular depth at runtime with no offline data; keeps 2D LiDAR as SLAM anchor and substitutes learned depth only in per-pixel-invalid regions; achieves +55\% costmap obstacle coverage in a live corridor and +110\% on LILocBench.
+    \item Distilled Depth Anything V3 + SAM2 into a 5.31M-parameter TensorRT student at 218\,FPS / 2.7\,GB on Jetson Orin Nano; corridor-specialized variant achieves 9/10 navigation success with zero collisions in closed-loop Gazebo simulation.
+    \item Built the full robot platform from scratch: Traxxas Maxx 4S, VESC MINI v6 motor controller, Teensy 4.1 encoder odometry, RPLiDAR S2, Orbbec Femto Bolt (RGB + ToF + IMU), on a Jetson Orin Nano 8\,GB running ROS~2/Nav2.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/vivekmattam02/spot}{\textcolor{blue}{\textbf{Autonomous Person Following on Boston Dynamics Spot}}} \hfill Jan 2025 -- Present
+\begin{itemize}
+    \item Built real-time person-following system using visual servoing with YOLOv8 detection, computing lateral, distance, and pitch errors for smooth 10Hz velocity commands.
+    \item Implemented body pitch control for tracking people on stairs and slopes; exploring ViNT and GNM for goal-conditioned predictive navigation.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/vivekmattam02/LAC_26}{\textcolor{blue}{\textbf{Lunar Autonomy Challenge - Perception-Aware Navigation}}} \hfill Summer 2025
+\begin{itemize}
+    \item Built autonomous navigation for simulated lunar rover without GPS or prior maps, combining ORB-SLAM3 for visual odometry with FoundationStereo for depth estimation.
+    \item Developed perception-aware costmap that propagates depth uncertainty through the pipeline; planner actively avoids shadowed craters and texture-poor surfaces where perception is unreliable.
+    \item Implemented A* planning with uncertainty-weighted costs and pure pursuit control for the full autonomy loop.
+\end{itemize}
+\vspace{1pt}
+
+\href{https://github.com/Nishant-ZFYII/rob6323_go2_project}{\textcolor{blue}{\textbf{Reinforcement Learning for Quadruped Locomotion}}} $|$ \textit{NVIDIA Isaac Lab} \hfill Sep 2025 -- Dec 2025
+\begin{itemize}
+    \item Trained Unitree Go2 with PPO implementing reward shaping, Raibert heuristic gait coordination, and actuator friction modeling with domain randomization.
+    \item Achieved 2x baseline velocity tracking on flat and rough terrain for sim-to-real transfer.
+\end{itemize}
+
+%----------SKILLS----------
+\section{Skills}
+
+\begin{itemize}[leftmargin=0in, label={}, itemsep=0pt]
+    \item \textbf{Languages:} Python, C++, C, MATLAB
+    \item \textbf{Autonomous Navigation:} ROS/ROS 2, Nav2, SLAM Toolbox, ORB-SLAM3, Visual Odometry, EKF, MPC, MPPI, A*, Pure Pursuit
+    \item \textbf{Perception \& ML:} PyTorch, OpenCV, CosPlace, SuperGlue, YOLOv8/v11, ByteTrack, RANSAC, ICP, Open3D
+    \item \textbf{Hardware \& Simulation:} Gazebo, Isaac Lab, Jetson Orin Nano, Arduino, TurtleBot3, Docker, Git, Boston Dynamics SDK
+\end{itemize}
+
+\end{document}
